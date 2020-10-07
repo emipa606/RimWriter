@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RimWriter_BurnBooks.label>焚燒書籍</RimWriter_BurnBooks.label>
+  <RimWriter_BurnBooks.description>燒掉不需要的書籍，徹底銷毀它們。</RimWriter_BurnBooks.description>
+  <RimWriter_BurnBooks.jobString>正在焚燒書籍。</RimWriter_BurnBooks.jobString>
+  <RimWriter_BurnScrolls.label>焚燒卷軸</RimWriter_BurnScrolls.label>
+  <RimWriter_BurnScrolls.description>燒掉不需要的卷軸，徹底銷毀它們。</RimWriter_BurnScrolls.description>
+  <RimWriter_BurnScrolls.jobString>正在焚燒卷軸。</RimWriter_BurnScrolls.jobString>
+</LanguageData>

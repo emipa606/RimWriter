@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RimWriter_ReadABook.reportString>阅读。</RimWriter_ReadABook.reportString>
+  <RimWriter_ReturnBook.reportString>返还TargetA。</RimWriter_ReturnBook.reportString>
+  <RimWriter_FreeWrite.reportString>写作练习。</RimWriter_FreeWrite.reportString>
+  <RimWriter_AutoWrite.reportString>自动化写作。</RimWriter_AutoWrite.reportString>
+</LanguageData>

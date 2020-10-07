@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RimWriter_MakePageFast.label>製作紙張 ×100</RimWriter_MakePageFast.label>
+  <RimWriter_MakePageFast.description>用幾根木頭就能做出大約一百張紙。</RimWriter_MakePageFast.description>
+  <RimWriter_MakePageFast.jobString>造紙中。</RimWriter_MakePageFast.jobString>
+  <RimWriter_MakePage.label>製作紙張 ×100</RimWriter_MakePage.label>
+  <RimWriter_MakePage.description>用幾根木頭就能做出大約一百張紙。</RimWriter_MakePage.description>
+  <RimWriter_MakePage.jobString>造紙中。</RimWriter_MakePage.jobString>
+  <RimWriter_MakeParchmentFast.label>製作羊皮紙 ×100</RimWriter_MakeParchmentFast.label>
+  <RimWriter_MakeParchmentFast.description>用皮革做出大約一百張羊皮紙。</RimWriter_MakeParchmentFast.description>
+  <RimWriter_MakeParchmentFast.jobString>造羊皮紙中。</RimWriter_MakeParchmentFast.jobString>
+  <RimWriter_MakeParchment.label>製作羊皮紙 ×100</RimWriter_MakeParchment.label>
+  <RimWriter_MakeParchment.description>用皮革做出大約一百張羊皮紙。</RimWriter_MakeParchment.description>
+  <RimWriter_MakeParchment.jobString>造羊皮紙中。</RimWriter_MakeParchment.jobString>
+  <RimWriter_MakeClothPaperFast.label>製作布紙 ×100</RimWriter_MakeClothPaperFast.label>
+  <RimWriter_MakeClothPaperFast.description>用各種各樣的布料做出大約一百張布紙。</RimWriter_MakeClothPaperFast.description>
+  <RimWriter_MakeClothPaperFast.jobString>造布紙中。</RimWriter_MakeClothPaperFast.jobString>
+  <RimWriter_MakeClothPaper.label>製作布紙 ×100</RimWriter_MakeClothPaper.label>
+  <RimWriter_MakeClothPaper.description>用各種各樣的布料做出大約一百張布紙。</RimWriter_MakeClothPaper.description>
+  <RimWriter_MakeClothPaper.jobString>造布紙中。</RimWriter_MakeClothPaper.jobString>
+</LanguageData>

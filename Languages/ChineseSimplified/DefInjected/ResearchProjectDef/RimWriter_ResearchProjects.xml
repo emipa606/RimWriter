@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Neolithic Tier -->
+  <RimWriter_TechPrimitiveWriting.label>原始书写技术</RimWriter_TechPrimitiveWriting.label>
+  <RimWriter_TechPrimitiveWriting.description>解锁建造石架，解锁制造能记录殖民地故事的石碑。</RimWriter_TechPrimitiveWriting.description>
+  <RimWriter_TechSimpleWriting.label>皮革书写技术</RimWriter_TechSimpleWriting.label>
+  <RimWriter_TechSimpleWriting.description>解锁使用皮革制品书写文字，记录殖民地故事。</RimWriter_TechSimpleWriting.description>
+  <RimWriter_TechBookshelves.label>书柜</RimWriter_TechBookshelves.label>
+  <RimWriter_TechBookshelves.description>解锁建造存放书籍、日志或卷轴的架子。</RimWriter_TechBookshelves.description>
+  <!-- Medieval Tier -->
+  <RimWriter_TechHandWriting.label>页面和装订</RimWriter_TechHandWriting.label>
+  <RimWriter_TechHandWriting.description>解锁在手工制作点或写作台制作用于写作的各种纸张材料和撰写简单的书籍。</RimWriter_TechHandWriting.description>
+  <!-- Industrial -->
+  <RimWriter_TechTypewriting.label>打字桌</RimWriter_TechTypewriting.label>
+  <RimWriter_TechTypewriting.description>解锁建造带有机械打字机的写字台，提供更好的写作环境。</RimWriter_TechTypewriting.description>
+</LanguageData>

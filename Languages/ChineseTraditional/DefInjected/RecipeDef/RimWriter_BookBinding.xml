@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RimWriter_MakeJournalAtTypewriter.label>用打字機寫日誌</RimWriter_MakeJournalAtTypewriter.label>
+  <RimWriter_MakeJournalAtTypewriter.description>用打字機壓平的紙張或羊皮紙之類的書寫用紙，然後把它們裝訂在一起，這樣就能寫日誌了。\n日誌通常是對事件或研究的具體描述，而不像通常的寫書具有虛構元素。</RimWriter_MakeJournalAtTypewriter.description>
+  <RimWriter_MakeJournalAtTypewriter.jobString>正在寫日誌。</RimWriter_MakeJournalAtTypewriter.jobString>
+  <RimWriter_MakeBookAtTypewriter.label>用打字機寫書</RimWriter_MakeBookAtTypewriter.label>
+  <RimWriter_MakeBookAtTypewriter.description>在打字機上寫書，用紙張或羊皮紙之類的書寫材料平整的打上字，並把它們裝訂在一起。</RimWriter_MakeBookAtTypewriter.description>
+  <RimWriter_MakeBookAtTypewriter.jobString>正在寫書。</RimWriter_MakeBookAtTypewriter.jobString>
+  <RimWriter_MakeJournalAtTable.label>用寫作台寫日誌</RimWriter_MakeJournalAtTable.label>
+  <RimWriter_MakeJournalAtTable.description>用寫字檯在平整的紙張或羊皮紙之類的紙上寫日誌，並把它們捆在一起。\n日誌通常是對事件或研究的具體描述，而不像通常的寫書具有虛構元素。</RimWriter_MakeJournalAtTable.description>
+  <RimWriter_MakeJournalAtTable.jobString>正在寫日誌。</RimWriter_MakeJournalAtTable.jobString>
+  <RimWriter_MakeBookAtTable.label>用寫作台寫書</RimWriter_MakeBookAtTable.label>
+  <RimWriter_MakeBookAtTable.description>在寫字檯上寫一本書，把紙或羊皮紙之類的壓扁的紙筆印在紙上，然後把它訂在一起。</RimWriter_MakeBookAtTable.description>
+  <RimWriter_MakeBookAtTable.jobString>正在寫書。</RimWriter_MakeBookAtTable.jobString>
+  <RimWriter_MakeJournalByHand.label>手寫日誌</RimWriter_MakeJournalByHand.label>
+  <RimWriter_MakeJournalByHand.description>在手工製作點手寫日記，在平整的紙張或羊皮紙之類的紙上寫出來，然後把它們捆在一起。\n日誌通常是對事件或研究的具體描述，而不像通常的寫書具有虛構元素。</RimWriter_MakeJournalByHand.description>
+  <RimWriter_MakeJournalByHand.jobString>正在手寫日誌。</RimWriter_MakeJournalByHand.jobString>
+  <RimWriter_MakeBook.label>手寫書籍</RimWriter_MakeBook.label>
+  <RimWriter_MakeBook.description>在手工製作點手寫書，在平整的紙張或羊皮紙之類的紙上寫出來，然後把它們捆在一起。</RimWriter_MakeBook.description>
+  <RimWriter_MakeBook.jobString>正在手寫書。</RimWriter_MakeBook.jobString>
+</LanguageData>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RimWriter_ReturnBooks.label>返還書籍</RimWriter_ReturnBooks.label>
+  <RimWriter_ReturnBooks.verb>返還</RimWriter_ReturnBooks.verb>
+  <RimWriter_ReturnBooks.gerund>正在返還</RimWriter_ReturnBooks.gerund>
+  <DoBillsWrite.label>寫書</DoBillsWrite.label>
+  <DoBillsWrite.verb>寫作</DoBillsWrite.verb>
+  <DoBillsWrite.gerund>正在寫作</DoBillsWrite.gerund>
+  <DoBillsPapermaking.label>製作</DoBillsPapermaking.label>
+  <DoBillsPapermaking.verb>製作</DoBillsPapermaking.verb>
+  <DoBillsPapermaking.gerund>正在製作</DoBillsPapermaking.gerund>
+</LanguageData>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Note to future self. 
+  Do not try to make the recipe makers abstract.
+  It doesn't work. -->
+  <Jecrell_Paper.label>纸张</Jecrell_Paper.label>
+  <Jecrell_Paper.description>一种由木材制成的用于写作书籍的材料。</Jecrell_Paper.description>
+  <Jecrell_Parchment.label>羊皮纸</Jecrell_Parchment.label>
+  <Jecrell_Parchment.description>一种由皮革制成可长期保存的写作材料。</Jecrell_Parchment.description>
+  <Jecrell_ClothPaper.label>布纸</Jecrell_ClothPaper.label>
+  <Jecrell_ClothPaper.description>一种用织物制成的经久耐用的材料，用于写作书籍，有时也被称为织物纸或碎布纸。</Jecrell_ClothPaper.description>
+</LanguageData>

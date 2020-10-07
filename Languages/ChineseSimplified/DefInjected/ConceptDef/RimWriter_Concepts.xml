@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RimWriter_PaperMaking.label>造纸</RimWriter_PaperMaking.label>
+  <RimWriter_PaperMaking.helpText>纸与羊皮纸都可以在造纸台制作。纸以原木为材料；羊皮纸则以皮革为材料。两者都可作为制作书籍的材料。</RimWriter_PaperMaking.helpText>
+  <RimWriter_BookBurning.label>烧书</RimWriter_BookBurning.label>
+  <RimWriter_BookBurning.helpText>书籍和卷轴能让你的殖民者获得娱乐，但也可能产生有害的思想和推翻资产阶级的企图。如果你想在自己的殖民地抑制无产阶级的思想，或是喜欢再现华氏451度，你可以选择在篝火或焚化炉烧掉这些书。</RimWriter_BookBurning.helpText>
+  <Jecrell_TypewriterTable.label>写作</Jecrell_TypewriterTable.label>
+  <Jecrell_TypewriterTable.helpText>殖民者可以用打字桌给自己带来快乐，减轻压力。如果加载了克苏鲁系列MOD(Call of Cthulhu)，这个工作台也会以更快的速度降低精神错乱的严重程度。殖民者还可以创建日志项目。目前，这些是基本的，可以销毁。在之后的更新中会将对其进行扩展。</Jecrell_TypewriterTable.helpText>
+</LanguageData>

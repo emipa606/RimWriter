@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- 4-6-20 -->
+  <RimWriter_WarningNoSkill>{0}没有{1}技能。</RimWriter_WarningNoSkill>
+  <RimWriter_WarningSkillDisabled>{0}的{1}技能被禁用，无法通过技能书提高此技能。</RimWriter_WarningSkillDisabled>
+  <!-- 9-29-18 -->
+  <RimWriter_ApplySettings>应用设置</RimWriter_ApplySettings>
+  <RimWriter_ComplexRecipes>启用简洁的制作清单</RimWriter_ComplexRecipes>
+  <RimWriter_ComplexRecipesTip>启用简洁的制作清单可以删除创建书籍的步骤并缩短其制作过程。</RimWriter_ComplexRecipesTip>
+  <!-- 9-25-18 -->
+  <RimWriter_Read>阅读{0}</RimWriter_Read>
+  <RimWriter_NoInternalStorage>存储不可用</RimWriter_NoInternalStorage>
+  <RimWriter_CannotRead>无法阅读{0}</RimWriter_CannotRead>
+  <!-- 9-24-18 -->
+  <RimWriter_GuideTitleWithAuthor>{0}的{1}技能书</RimWriter_GuideTitleWithAuthor>
+  <RimWriter_GuideTitle>{0}技能书</RimWriter_GuideTitle>
+  <RimWriter_GuideSkillDesc>这本特殊的技能书以{1}的效率传授{0}技能。</RimWriter_GuideSkillDesc>
+  <RimWriter_Destroy>废弃</RimWriter_Destroy>
+  <RimWriter_DestroyDesc>可以快捷处理掉{0}就像它从未存在过一样……也许会留下一些垃圾。</RimWriter_DestroyDesc>
+  <!-- 8-26-18 -->
+  <RimWriter_Inventory>库存</RimWriter_Inventory>
+  <RimWriter_XSlotsForBooks>最大容纳{0}本书</RimWriter_XSlotsForBooks>
+  <RimWriter_BookTitle>{0}由{1}所著</RimWriter_BookTitle>
+  <RimWriter_RetrieveBook>检索书</RimWriter_RetrieveBook>
+  <RimWriter_RetrieveBookDesc>从书柜中查找并取出书</RimWriter_RetrieveBookDesc>
+  <RimWriter_ContainsXBooks>包含{0}本书</RimWriter_ContainsXBooks>
+</LanguageData>

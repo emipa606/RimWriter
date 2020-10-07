@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <Jecrell_Book.label>書</Jecrell_Book.label>
+  <Jecrell_Book.description>裝訂好的書籍。</Jecrell_Book.description>
+  <Jecrell_Guidebook.label>技能指導書</Jecrell_Guidebook.label>
+  <Jecrell_Guidebook.description>技能指導書能夠幫助使用者提高技能等級。</Jecrell_Guidebook.description>
+</LanguageData>

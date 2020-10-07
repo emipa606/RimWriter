@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RimWriter_TableTypewriter.label>打字桌</RimWriter_TableTypewriter.label>
+  <RimWriter_TableTypewriter.description>配备打字机的写字台。</RimWriter_TableTypewriter.description>
+  <RimWriter_TableTypewriter.comps.0.useLabel>写作</RimWriter_TableTypewriter.comps.0.useLabel>
+  <RimWriter_TableWriting.label>写作台</RimWriter_TableWriting.label>
+  <RimWriter_TableWriting.description>配有羽毛笔、剪刀、尺子和墨水的写字台。</RimWriter_TableWriting.description>
+  <RimWriter_TableWriting.comps.0.useLabel>写作</RimWriter_TableWriting.comps.0.useLabel>
+</LanguageData>
