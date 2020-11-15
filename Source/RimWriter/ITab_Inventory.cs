@@ -41,13 +41,7 @@ namespace RimWriter
 
         private static readonly List<Thing> workingInvList = new List<Thing>();
 
-        public override bool IsVisible
-        {
-            get
-            {
-                return SelStorage.TryGetInnerInteractableThingOwner().Count > 0;
-            }
-        }
+        public override bool IsVisible => SelStorage.TryGetInnerInteractableThingOwner().Count > 0;
 
         private Building_InternalStorage SelStorage
         {
@@ -61,14 +55,8 @@ namespace RimWriter
             }
         }
 
-        private bool CanControl
-        {
-            get
-            {
-                return SelStorage.Spawned && SelStorage.Faction == Faction.OfPlayer;
-            }
-        }
-        
+        private bool CanControl => SelStorage.Spawned && SelStorage.Faction == Faction.OfPlayer;
+
         //private Pawn SelPawnForGear
         //{
         //    get
@@ -95,16 +83,16 @@ namespace RimWriter
         protected override void FillTab()
         {
             Text.Font = GameFont.Small;
-            Rect rect = new Rect(0f, 20f, size.x, size.y - 20f);
+            var rect = new Rect(0f, 20f, size.x, size.y - 20f);
             Rect rect2 = rect.ContractedBy(10f);
-            Rect position = new Rect(rect2.x, rect2.y, rect2.width, rect2.height);
+            var position = new Rect(rect2.x, rect2.y, rect2.width, rect2.height);
             GUI.BeginGroup(position);
             Text.Font = GameFont.Small;
             GUI.color = Color.white;
-            Rect outRect = new Rect(0f, 0f, position.width, position.height);
-            Rect viewRect = new Rect(0f, 0f, position.width - 16f, scrollViewHeight);
+            var outRect = new Rect(0f, 0f, position.width, position.height);
+            var viewRect = new Rect(0f, 0f, position.width - 16f, scrollViewHeight);
             Widgets.BeginScrollView(outRect, ref scrollPosition, viewRect, true);
-            float num = 0f;
+            var num = 0f;
             //this.TryDrawMassInfo(ref num, viewRect.width);
             //this.TryDrawComfyTemperatureRange(ref num, viewRect.width);
             //if (this.SelPawnForGear.apparel != null)
@@ -138,7 +126,7 @@ namespace RimWriter
                 Widgets.ListSeparator(ref num, viewRect.width, "Inventory".Translate());
                 workingInvList.Clear();
                 workingInvList.AddRange(t);
-                for (int i = 0; i < workingInvList.Count; i++)
+                for (var i = 0; i < workingInvList.Count; i++)
                 {
                     DrawThingRow(ref num, viewRect.width, workingInvList[i], true);
                 }
@@ -155,12 +143,12 @@ namespace RimWriter
 
         private void DrawThingRow(ref float y, float width, Thing thing, bool inventory = false)
         {
-            Rect rect = new Rect(0f, y, width, 28f);
+            var rect = new Rect(0f, y, width, 28f);
             Widgets.InfoCardButton(rect.width - 24f, y, thing);
             rect.width -= 24f;
             if (CanControl)
             {
-                Rect rect2 = new Rect(rect.width - 24f, y, 24f, 24f);
+                var rect2 = new Rect(rect.width - 24f, y, 24f, 24f);
                 TooltipHandler.TipRegion(rect2, "DropThing".Translate());
                 if (Widgets.ButtonImage(rect2, ITabButton.Drop))
                 {
@@ -185,15 +173,15 @@ namespace RimWriter
             }
             Text.Anchor = TextAnchor.MiddleLeft;
             GUI.color = ThingLabelColor;
-            Rect rect5 = new Rect(36f, y, rect.width - 36f, rect.height);
-            string text = thing.LabelCap;
+            var rect5 = new Rect(36f, y, rect.width - 36f, rect.height);
+            var text = thing.LabelCap;
             Text.WordWrap = false;
             Widgets.Label(rect5, text.Truncate(rect5.width, null));
             Text.WordWrap = true;
-            string text2 = thing.LabelCap;
+            var text2 = thing.LabelCap;
             if (thing.def.useHitPoints)
             {
-                string text3 = text2;
+                var text3 = text2;
                 text2 = string.Concat(new object[]
                 {
                     text3,

@@ -15,13 +15,7 @@ namespace RimWriter
             return pawn.Map.listerThings.AllThings.FindAll(x => x is ThingBook);
         }
 
-        public override PathEndMode PathEndMode
-        {
-            get
-            {
-                return PathEndMode.ClosestTouch;
-            }
-        }
+        public override PathEndMode PathEndMode => PathEndMode.ClosestTouch;
 
         public override bool ShouldSkip(Pawn pawn, bool forced = false)
         {
@@ -41,7 +35,7 @@ namespace RimWriter
 
         public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
-            ThingBook book = t as ThingBook;
+            var book = t as ThingBook;
             if (!MeetsExceptionList(t) && book == null)
             {
                 return null;
@@ -67,17 +61,20 @@ namespace RimWriter
             bool predicate(Thing m) => !m.IsForbidden(p) && p.CanReserveNew(m) && ((Building_InternalStorage)m).Accepts(book);
             float priorityGetter(Thing t)
             {
-                float result = 0f;
+                var result = 0f;
                 result += (float)((IStoreSettingsParent)t).GetStoreSettings().Priority;
                 if (t is Building_InternalStorage bS && bS.TryGetInnerInteractableThingOwner()?.Count > 0)
+                {
                     result -= bS.TryGetInnerInteractableThingOwner().Count;
+                }
+
                 return result;
             }
             IntVec3 position = book.Position;
             Map map = book.Map;
             List<Thing> searchSet = book.Map.listerThings.AllThings.FindAll(x => x is Building_InternalStorage);
             PathEndMode peMode = PathEndMode.ClosestTouch;
-            TraverseParms traverseParams = TraverseParms.For(p, Danger.Deadly, TraverseMode.ByPawn, false);
+            var traverseParams = TraverseParms.For(p, Danger.Deadly, TraverseMode.ByPawn, false);
             Predicate<Thing> validator = predicate;
             return (Building_InternalStorage)GenClosest.ClosestThing_Global_Reachable(position, map, searchSet, peMode, traverseParams, 9999f, validator, priorityGetter);
         }

@@ -41,9 +41,9 @@ namespace RimWriter
         {
             this.pawn.rotationTracker.FaceCell(TargetB.Cell);
             this.pawn.GainComfortFromCellIfPossible();
-            float statValue = TargetThingA.GetStatValue(StatDefOf.JoyGainFactor, true);
+            var statValue = TargetThingA.GetStatValue(StatDefOf.JoyGainFactor, true);
             Pawn pawn = this.pawn;
-            float extraJoyGainFactor = statValue;
+            var extraJoyGainFactor = statValue;
             if (TargetThingA is GuideBook gBook)
             {
                 gBook.Teach(pawn);
@@ -81,7 +81,7 @@ namespace RimWriter
             wait.FailOnCannotTouch(TargetIndex.B, PathEndMode.Touch);
             wait.tickAction = ReadTickAction;
             yield return wait;
-            Toil libraryThoughtToil = new Toil
+            var libraryThoughtToil = new Toil
             {
                 initAction = delegate { RimWriterUtility.TryGainLibraryThought(pawn); }
             };
@@ -96,7 +96,7 @@ namespace RimWriter
         // Token: 0x060003BE RID: 958 RVA: 0x00025D2C File Offset: 0x0002412C
         public static Toil CarryBookToReadSpot(Pawn pawn, TargetIndex ingestibleInd)
         {
-            Toil toil = new Toil();
+            var toil = new Toil();
             toil.initAction = delegate
             {
                 Pawn actor = toil.actor;
@@ -129,8 +129,8 @@ namespace RimWriter
                     {
                         return false;
                     }
-                    bool result = false;
-                    for (int i = 0; i < 4; i++)
+                    var result = false;
+                    for (var i = 0; i < 4; i++)
                     {
                         IntVec3 c = t.Position + GenAdj.CardinalDirections[i];
                         Building edifice = c.GetEdifice(t.Map);

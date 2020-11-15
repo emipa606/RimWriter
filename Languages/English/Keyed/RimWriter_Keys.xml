@@ -21,5 +21,4 @@
   <RimWriter_RetrieveBook>Retrieve Book</RimWriter_RetrieveBook>
   <RimWriter_RetrieveBookDesc>Find and remove a particular book from the bookcase.</RimWriter_RetrieveBookDesc>
   <RimWriter_ContainsXBooks>Contains {0} books</RimWriter_ContainsXBooks>
-
 </LanguageData>

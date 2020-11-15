@@ -27,9 +27,12 @@ namespace RimWriter
             this.EndOnDespawnedOrNull(TargetIndex.A, JobCondition.Incompletable);
             yield return Toils_Reserve.Reserve(TargetIndex.A, job.def.joyMaxParticipants);
             if (TargetB != null)
+            {
                 yield return Toils_Reserve.Reserve(TargetIndex.B, 1);
+            }
+
             yield return Toils_Goto.GotoThing(TargetIndex.B, PathEndMode.OnCell);
-            Toil toil = new Toil();
+            var toil = new Toil();
             toil.PlaySustainerOrSound(TargetThingA?.def?.defName == "RimWriter_TableTypewriter"
                 ? DefDatabase<SoundDef>.GetNamed("RimWriter_SoundManualTypewriter") : DefDatabase<SoundDef>.GetNamed(
                     "RimWriter_SoundManualPencil"));
@@ -37,8 +40,8 @@ namespace RimWriter
             {
                 pawn.rotationTracker.FaceCell(TargetA.Cell);
                 pawn.GainComfortFromCellIfPossible();
-                float statValue = TargetThingA.GetStatValue(StatDefOf.JoyGainFactor, true);
-                float extraJoyGainFactor = statValue;
+                var statValue = TargetThingA.GetStatValue(StatDefOf.JoyGainFactor, true);
+                var extraJoyGainFactor = statValue;
                 JoyUtility.JoyTickCheckEnd(pawn, JoyTickFullJoyAction.GoToNextToil, extraJoyGainFactor);
             };
             toil.defaultCompleteMode = ToilCompleteMode.Delay;
@@ -48,7 +51,7 @@ namespace RimWriter
                  RimWriterUtility.TryGainLibraryThought(pawn);
             });
             yield return toil;
-            Toil finishedToil = new Toil
+            var finishedToil = new Toil
             {
                 initAction = delegate
                 {

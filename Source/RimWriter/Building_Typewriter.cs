@@ -64,7 +64,9 @@ namespace RimWriter
         public override void TickRare()
         {
             if (destroyedFlag) // Do nothing further, when destroyed (just a safety)
+            {
                 return;
+            }
 
             // Don't forget the base work
             base.TickRare();
@@ -81,7 +83,9 @@ namespace RimWriter
         public override void Tick()
         {
             if (destroyedFlag) // Do nothing further, when destroyed (just a safety)
+            {
                 return;
+            }
 
             base.Tick();
 
@@ -110,7 +114,7 @@ namespace RimWriter
         /// <returns></returns>
         public override string GetInspectString()
         {
-            StringBuilder stringBuilder = new StringBuilder();
+            var stringBuilder = new StringBuilder();
 
             // Add the inspections string from the base
             stringBuilder.Append(base.GetInspectString());
@@ -179,8 +183,8 @@ namespace RimWriter
             base.GetFloatMenuOptions(myPawn);
 
             Thing building = null;
-            bool flag = false;
-            for (int i = 0; i < 4; i++)
+            var flag = false;
+            for (var i = 0; i < 4; i++)
             {
                 IntVec3 c = Position + GenAdj.CardinalDirections[i];
                 if (!c.IsForbidden(myPawn))
@@ -201,7 +205,7 @@ namespace RimWriter
             
             if (!myPawn.CanReserve(this, 1))
             {
-                FloatMenuOption item = new FloatMenuOption("CannotUseReserved".Translate(), null, MenuOptionPriority.Default, null, null, 0f, null);
+                var item = new FloatMenuOption("CannotUseReserved".Translate(), null, MenuOptionPriority.Default, null, null, 0f, null);
                 return new List<FloatMenuOption>
                 {
                     item
@@ -209,7 +213,7 @@ namespace RimWriter
             }
             if (!myPawn.CanReach(this, PathEndMode.InteractionCell, Danger.Some, false, TraverseMode.ByPawn))
             {
-                FloatMenuOption item2 = new FloatMenuOption("CannotUseNoPath".Translate(), null, MenuOptionPriority.Default, null, null, 0f, null);
+                var item2 = new FloatMenuOption("CannotUseNoPath".Translate(), null, MenuOptionPriority.Default, null, null, 0f, null);
                 return new List<FloatMenuOption>
                 {
                     item2
@@ -217,7 +221,7 @@ namespace RimWriter
             }
             if (building == null)
             {
-                FloatMenuOption item2 = new FloatMenuOption("Seat required", null, MenuOptionPriority.Default, null, null, 0f, null);
+                var item2 = new FloatMenuOption("Seat required", null, MenuOptionPriority.Default, null, null, 0f, null);
                 return new List<FloatMenuOption>
                 {
                     item2
@@ -225,19 +229,19 @@ namespace RimWriter
             }
             if (!myPawn.health.capacities.CapableOf(PawnCapacityDefOf.Manipulation))
             {
-                FloatMenuOption item4 = new FloatMenuOption(TranslatorFormattedStringExtensions.Translate("CannotUseReason",
+                var item4 = new FloatMenuOption(TranslatorFormattedStringExtensions.Translate("CannotUseReason",
                     TranslatorFormattedStringExtensions.Translate("IncapableOfCapacity", PawnCapacityDefOf.Manipulation.label)), null, MenuOptionPriority.Default, null, null, 0f, null);
                 return new List<FloatMenuOption>
                 {
                     item4
                 };
             }
-            List<FloatMenuOption> list = new List<FloatMenuOption>();
+            var list = new List<FloatMenuOption>();
             if (flag)
             {
                 void action0()
                 {
-                    Job job = new Job(DefDatabase<JobDef>.GetNamed("RimWriter_FreeWrite"), this, building);
+                    var job = new Job(DefDatabase<JobDef>.GetNamed("RimWriter_FreeWrite"), this, building);
                     if (job != null)
                     {
                         if (myPawn.jobs.TryTakeOrderedJob(job))

@@ -40,14 +40,8 @@ namespace RimWriter
                 return 0.5f;
             }
         }
-        
-        public float LearnRate
-        {
-            get
-            {
-                return learnRate * QualityRate;
-            }
-        }
+
+        public float LearnRate => learnRate * QualityRate;
 
         public GuideBook()
         {
@@ -79,7 +73,7 @@ namespace RimWriter
                 if (CompArt != null)
                 {
                     
-                    return (Author.NullOrEmpty())
+                    return Author.NullOrEmpty()
                         ? "RimWriter_GuideTitle".Translate(skillDef.LabelCap) + " (" + CompQuality.Quality.GetLabel() + ")"
                         : "RimWriter_GuideTitleWithAuthor".Translate(Author, skillDef.LabelCap) + " (" + CompQuality.Quality.GetLabel() + ")";
                 }
@@ -102,16 +96,16 @@ namespace RimWriter
             {
                 if (author == null)
                 {
-                    var authorNameInt = Traverse.Create(CompArt).Field("authorNameInt").GetValue<string>();
-                    Log.Message(authorNameInt);
-                    if (!string.IsNullOrEmpty(authorNameInt) && !authorNameInt.StartsWith(" "))
+                    var authorNameInt = Traverse.Create(CompArt).Field("authorNameInt").GetValue<TaggedString>();
+                    if (!string.IsNullOrEmpty(authorNameInt) && !authorNameInt.RawText.StartsWith(" "))
                     {
+                        //Log.Message(authorNameInt);
                         author = authorNameInt;                        
                     }
                     else
                     {
                         author = Authors.Random;
-                        Traverse.Create(CompArt).Field("authorNameInt").SetValue(author);
+                        Traverse.Create(CompArt).Field("authorNameInt").SetValue((TaggedString)author);
                     }
                 }
                 return author;
@@ -127,41 +121,63 @@ namespace RimWriter
                 {
                     var result = Color.white;
                     if (skillDef == SkillDefOf.Animals)
+                    {
                         result = new Color(0.14f, 0.19f, 0.42f); //Color.steelblue;
+                    }
                     else if (skillDef == SkillDefOf.Artistic)
+                    {
                         result = new Color(0.33f, 0.1f, 0.55f); //Color.purple
+                    }
                     else if (skillDef == SkillDefOf.Construction)
+                    {
                         result = new Color(0.8f, 0.4f, 0f); //Color.orange;
+                    }
                     else if (skillDef == SkillDefOf.Cooking)
+                    {
                         result = new Color(0.4f, 0f, 0f); //Color.dullred;
+                    }
                     else if (skillDef == SkillDefOf.Crafting)
+                    {
                         result = new Color(0.5f, 0.16f, 0.16f); //Color.brown;
+                    }
                     else if (skillDef == SkillDefOf.Intellectual)
+                    {
                         result = new Color(0f, 0f, 0.5f); //Color.navy;
+                    }
                     else if (skillDef == SkillDefOf.Medicine)
+                    {
                         result = Color.white;
+                    }
                     else if (skillDef == SkillDefOf.Melee)
+                    {
                         result = Color.red;
+                    }
                     else if (skillDef == SkillDefOf.Mining)
+                    {
                         result = Color.black;
+                    }
                     else if (skillDef == SkillDefOf.Plants)
+                    {
                         result = new Color(0.13f, 0.55f, 0.13f); //Color.forestgreen;
+                    }
                     else if (skillDef == SkillDefOf.Shooting)
+                    {
                         result = Color.gray;
+                    }
                     else if (skillDef == SkillDefOf.Social)
+                    {
                         result = new Color(0.93f, 0.8f, 0.68f);
+                    }
+
                     skillColor = result;
                 }
                 return skillColor.Value;
             }
         }
-        
-        public override Graphic Graphic { get => DefaultGraphic.GetColoredVersion(ShaderDatabase.CutoutComplex, SkillColor, SkillColor); }
 
-        public override string DescriptionFlavor
-        {
-            get => "RimWriter_GuideSkillDesc".Translate(skillDef.label, QualityRate.ToStringPercent()) + "\n" + base.DescriptionFlavor;
-        }
+        public override Graphic Graphic => DefaultGraphic.GetColoredVersion(ShaderDatabase.CutoutComplex, SkillColor, SkillColor);
+
+        public override string DescriptionFlavor => "RimWriter_GuideSkillDesc".Translate(skillDef.label, QualityRate.ToStringPercent()) + "\n" + base.DescriptionFlavor;
 
         public override void ExposeData()
         {

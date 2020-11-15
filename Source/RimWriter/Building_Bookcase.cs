@@ -12,12 +12,18 @@ namespace RimWriter
     {
         public override string GetInspectString()
         {
-            StringBuilder s = new StringBuilder();
-            string baseStr = base.GetInspectString();
+            var s = new StringBuilder();
+            var baseStr = base.GetInspectString();
             if (baseStr != "")
+            {
                 s.AppendLine(baseStr);
+            }
+
             if (innerContainer.Count > 0)
+            {
                 s.AppendLine("RimWriter_ContainsXBooks".Translate(innerContainer.Count));
+            }
+
             s.AppendLine("RimWriter_XSlotsForBooks".Translate(CompStorageGraphic.Props.countFullCapacity));
             return s.ToString().TrimEndNewlines();
         }
@@ -25,7 +31,10 @@ namespace RimWriter
         public override IEnumerable<Gizmo> GetGizmos()
         {
             foreach (Gizmo g in base.GetGizmos())
+            {
                 yield return g;
+            }
+
             if (innerContainer.Count > 0)
             {
                 yield return new Command_Action()
@@ -46,15 +55,18 @@ namespace RimWriter
         public void ProcessInput()
         {
 
-            List<FloatMenuOption> list = new List<FloatMenuOption>();
+            var list = new List<FloatMenuOption>();
             Map map = Map;
             if (innerContainer.Count != 0)
             {
                 foreach (ThingBook current in innerContainer)
                 {
-                    string text = current.Label;
+                    var text = current.Label;
                     if (current.TryGetComp<CompArt>() is CompArt compArt)
+                    {
                         text = TranslatorFormattedStringExtensions.Translate("RimWriter_BookTitle", compArt.Title, compArt.AuthorName);
+                    }
+
                     List<FloatMenuOption> arg_121_0 = list;
                     bool extraPartOnGUI(Rect rect) => Widgets.InfoCardButton(rect.x + 5f, rect.y + (rect.height - 24f) / 2f, current);
                     arg_121_0.Add(new FloatMenuOption(text, delegate

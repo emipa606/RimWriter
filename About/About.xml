@@ -20,54 +20,64 @@
   <loadAfter>
     <li>brrainz.harmony</li>
   </loadAfter>
-  <description>Update of Jecrells mod
+  <description>[img]https://i.imgur.com/WAEzk68.png[/img]
+Update of Jecrells mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=1521844535
 
-[img]https://i.imgur.com/GYswkZ7.png[/img]
-
-Support-chat:
-https://invite.gg/mlie
-
-Non-steam version:
-https://github.com/emipa606/RimWriter
-	
 - This is an unofficial port
 - This will be removed when/if Jecrell comes back
 - Added chinese translation based on the mod by leafzxg
 
---- Original Description ---
+[img]https://i.imgur.com/7Gzt3Rg.png[/img]
+
+[table]
+	[tr]
+		[td][url=https://invite.gg/Mlie][img]https://i.imgur.com/zdzzBrc.png[/img][/url][/td]
+		[td][url=https://github.com/emipa606/RimWriter][img]https://i.imgur.com/kTkpTOE.png[/img][/url][/td]
+	[/tr]
+[/table]
+	
+[img]https://i.imgur.com/NOW7jU1.png[/img]
+
 Add tablets, books, scrolls, libraries, and more to your RimWorld playthroughs.
 
 RimWriter is a mod that adds a lot of content focused on writing to supplement the standard vanilla RimWorld playthrough such as:
 
--Items
-* Stone Tablets
-* Leather Scrolls
-* Journals
-* Handwritten Books
-* Typed Books and Journals
-* Skillbooks for improving skills
+[h1]-Items[/h1]
+  * Stone Tablets
+  * Leather Scrolls
+  * Journals
+  * Handwritten Books
+  * Typed Books and Journals
+  * Skillbooks for improving skills
 
--Furniture
-* Stone shelves for tablets
-* Scrollcases, tall and short
-* Bookcases, tall and short
-* Writer's tables
-* A typewriter
+[h1]-Furniture[/h1]
+  * Stone shelves for tablets
+  * Scrollcases, tall and short
+  * Bookcases, tall and short
+  * Writer's tables
+  * A typewriter
 
--Features
-* Customized text generation for tablets, books, and journals.
-* Compatiblity with Lord of the Rims and Call of Cthulhu mods.
-- In Call of Cthulhu, writing reduces sanity loss over time.
-- Future compatability with storing Grimoires and Wizard textbooks inside bookcases/scrollcases.
+[h1]-Features[/h1]
+  * Customized text generation for tablets, books, and journals.
+  * Compatiblity with Lord of the Rims and Call of Cthulhu mods.
+    - In Call of Cthulhu, writing reduces sanity loss over time.
+    - Future compatability with storing Grimoires and Wizard textbooks inside bookcases/scrollcases.
 
-Q and A:
-Why create this mod?
+[h1]QandA:[/h1]
+[b]Why create this mod?[/b]
 I wanted to make a framework sort of mod that I could add to or use later in my current and future projects. I feel that tablets, scrolls, and books all have a clear place in RimWorld and future mods.
 
-Is this mod old save compatible?
+[b]Is this mod old save compatible?[/b]
 Yes.
 
-Does this mod conflict with other joy mods?
-No.</description>
+[b]Does this mod conflict with other joy mods?[/b]
+No.
+
+[h1]
+Psst...
+Still there fellow RimWorlder?
+Want to buy me a coffee? Perhaps more mods for RimWorld?
+Consider donating to my Patreon, here: https://www.patreon.com/jecrell
+[/h1]</description>
 </ModMetaData>

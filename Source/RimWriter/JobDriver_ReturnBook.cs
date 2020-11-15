@@ -17,23 +17,11 @@ namespace RimWriter
 
         // Token: 0x1700008D RID: 141
         // (get) Token: 0x060002A6 RID: 678 RVA: 0x00018B04 File Offset: 0x00016F04
-        private ThingBook Book
-        {
-            get
-            {
-                return (ThingBook)job.GetTarget(TargetIndex.A).Thing;
-            }
-        }
+        private ThingBook Book => (ThingBook)job.GetTarget(TargetIndex.A).Thing;
 
         // Token: 0x1700008E RID: 142
         // (get) Token: 0x060002A7 RID: 679 RVA: 0x00018B2C File Offset: 0x00016F2C
-        private Building_InternalStorage Storage
-        {
-            get
-            {
-                return (Building_InternalStorage)job.GetTarget(TargetIndex.B).Thing;
-            }
-        }
+        private Building_InternalStorage Storage => (Building_InternalStorage)job.GetTarget(TargetIndex.B).Thing;
 
         // Token: 0x060002A8 RID: 680 RVA: 0x00018B54 File Offset: 0x00016F54
         public override bool TryMakePreToilReservations(bool b)
@@ -64,7 +52,7 @@ namespace RimWriter
                     }
                     if (Storage.Accepts(Book))
 					{
-                        bool flag = false;
+                        var flag = false;
                         if (Book.holdingOwner != null)
                         {
                             Book.holdingOwner.TryTransferToContainer(Book, Storage.TryGetInnerInteractableThingOwner(), Book.stackCount, true);

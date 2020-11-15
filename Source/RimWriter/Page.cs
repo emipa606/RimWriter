@@ -11,7 +11,9 @@ namespace RimWriter
         public override IEnumerable<Gizmo> GetGizmos()
         {
             foreach (var gizmo in base.GetGizmos())
+            {
                 yield return gizmo;
+            }
 
             if (!Destroyed)
             {

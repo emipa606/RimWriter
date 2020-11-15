@@ -14,19 +14,19 @@ namespace RimWriter
         {
             IEnumerable<Thing> source = pawn.Map.listerThings.AllThings.FindAll(y => y is Building_Bookcase).Where(delegate (Thing x)
             {
-                Building_Bookcase building_bookcase = (Building_Bookcase)x;
+                var building_bookcase = (Building_Bookcase)x;
                 return x?.TryGetInnerInteractableThingOwner()?.Count > 0 && x.Faction == Faction.OfPlayer && !building_bookcase.IsForbidden(pawn) && 
                 pawn.CanReserveAndReach(x, PathEndMode.Touch, Danger.None, 1, -1, null, false) && building_bookcase.IsPoliticallyProper(pawn);
             });
             if (!source.TryRandomElementByWeight(delegate (Thing x)
             {
-                float lengthHorizontal = (x.Position - pawn.Position).LengthHorizontal;
+                var lengthHorizontal = (x.Position - pawn.Position).LengthHorizontal;
                 return Mathf.Max(150f - lengthHorizontal, 5f);
             }, out Thing t))
             {
                 return null;
             }
-            Job tempJob = new Job(def.jobDef, t)
+            var tempJob = new Job(def.jobDef, t)
             {
                 count = 1
             };

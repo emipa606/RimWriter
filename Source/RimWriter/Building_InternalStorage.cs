@@ -92,7 +92,11 @@ namespace RimWriter
             if (innerContainer.Count > 0)
             {
                 innerContainer.TryDrop(innerContainer.RandomElement(), ThingPlaceMode.Near, out Thing outThing);
-                if (forbid) outThing.SetForbidden(true);
+                if (forbid)
+                {
+                    outThing.SetForbidden(true);
+                }
+
                 droppedThing = outThing as ThingBook;
                 return true;
             }
@@ -108,7 +112,11 @@ namespace RimWriter
             if (innerContainer.Contains(item))
             {
                 innerContainer.TryDrop(item, ThingPlaceMode.Near, out Thing outThing);
-                if (forbid) outThing.SetForbidden(true);
+                if (forbid)
+                {
+                    outThing.SetForbidden(true);
+                }
+
                 return true;
             }
             return false;

@@ -39,7 +39,9 @@ namespace RimWriter
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn selPawn)
         {
             foreach (var op in base.GetFloatMenuOptions(selPawn))
+            {
                 yield return op;
+            }
 
             if (!selPawn.health.capacities.CapableOf(PawnCapacityDefOf.Sight) ||
                 !selPawn.health.capacities.CapableOf(PawnCapacityDefOf.Manipulation))
@@ -54,7 +56,7 @@ namespace RimWriter
                 yield return FloatMenuUtility.DecoratePrioritizedTask(
                     new FloatMenuOption("RimWriter_Read".Translate(Label), delegate()
                         {
-                            Job job = new Job(DefDatabase<JobDef>.GetNamedSilentFail("RimWriter_ReadABook"), this)
+                            var job = new Job(DefDatabase<JobDef>.GetNamedSilentFail("RimWriter_ReadABook"), this)
                             {
                                 count = 1
                             };
@@ -67,7 +69,9 @@ namespace RimWriter
         public override IEnumerable<Gizmo> GetGizmos()
         {
             foreach (var gizmo in base.GetGizmos())
+            {
                 yield return gizmo;
+            }
 
             if (!Destroyed)
             {

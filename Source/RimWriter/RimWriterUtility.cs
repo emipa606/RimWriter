@@ -64,7 +64,7 @@ namespace RimWriter
             Room room = pawn.GetRoom(RegionType.Set_Passable);
             if (room?.Role?.defName == "RimWriter_Library")
             {
-                int scoreStageIndex =
+                var scoreStageIndex =
                     RoomStatDefOf.Impressiveness.GetScoreStageIndex(room.GetStat(RoomStatDefOf.Impressiveness));
                 var libraryThought = ThoughtDef.Named("RimWriter_ReadingInImpressiveLibrary");
                 if (libraryThought?.stages[scoreStageIndex] != null)
@@ -77,19 +77,27 @@ namespace RimWriter
 
         public static bool IsCosmicHorrorsLoaded()
         {
-            if (!modCheck) ModCheck();
+            if (!modCheck)
+            {
+                ModCheck();
+            }
+
             return loadedCosmicHorrors;
         }
 
         public static bool IsCultsLoaded()
         {
-            if (!modCheck) ModCheck();
+            if (!modCheck)
+            {
+                ModCheck();
+            }
+
             return loadedCults;
         }
 
         public static bool HasSanityLoss(Pawn pawn)
         {
-            string sanityLossDef = (!IsCosmicHorrorsLoaded()) ? AltSanityLossDef : SanityLossDef;
+            var sanityLossDef = (!IsCosmicHorrorsLoaded()) ? AltSanityLossDef : SanityLossDef;
             var pawnSanityHediff =
                 pawn.health.hediffSet.GetFirstHediffOfDef(DefDatabase<HediffDef>.GetNamed(sanityLossDef));
 
@@ -106,17 +114,21 @@ namespace RimWriter
         /// <param name="sanityLossMax"></param>
         public static bool ApplySanityLoss(Pawn pawn, float sanityLoss = 0.3f, float sanityLossMax = 1.0f)
         {
-            bool appliedSuccessfully = false;
+            var appliedSuccessfully = false;
             if (pawn != null)
             {
-                string sanityLossDef = (!IsCosmicHorrorsLoaded()) ? AltSanityLossDef : SanityLossDef;
+                var sanityLossDef = (!IsCosmicHorrorsLoaded()) ? AltSanityLossDef : SanityLossDef;
 
                 var pawnSanityHediff =
                     pawn.health.hediffSet.GetFirstHediffOfDef(DefDatabase<HediffDef>.GetNamedSilentFail(sanityLossDef));
                 if (pawnSanityHediff != null)
                 {
-                    if (pawnSanityHediff.Severity > sanityLossMax) sanityLossMax = pawnSanityHediff.Severity;
-                    float result = pawnSanityHediff.Severity;
+                    if (pawnSanityHediff.Severity > sanityLossMax)
+                    {
+                        sanityLossMax = pawnSanityHediff.Severity;
+                    }
+
+                    var result = pawnSanityHediff.Severity;
                     result += sanityLoss;
                     result = Mathf.Clamp(result, 0.0f, sanityLossMax);
                     pawnSanityHediff.Severity = result;
@@ -147,16 +159,16 @@ namespace RimWriter
         /// <param name="sanityLossMax"></param>
         public static bool ReduceSanityLoss(Pawn pawn, float sanityRestored)
         {
-            bool appliedSuccessfully = false;
+            var appliedSuccessfully = false;
             if (pawn != null)
             {
-                string sanityLossDef = (!IsCosmicHorrorsLoaded()) ? AltSanityLossDef : SanityLossDef;
+                var sanityLossDef = (!IsCosmicHorrorsLoaded()) ? AltSanityLossDef : SanityLossDef;
 
                 var pawnSanityHediff =
                     pawn.health.hediffSet.GetFirstHediffOfDef(DefDatabase<HediffDef>.GetNamedSilentFail(sanityLossDef));
                 if (pawnSanityHediff != null)
                 {
-                    float result = pawnSanityHediff.Severity;
+                    var result = pawnSanityHediff.Severity;
                     result -= sanityRestored;
                     pawnSanityHediff.Severity = result;
                     appliedSuccessfully = true;
@@ -173,7 +185,11 @@ namespace RimWriter
             loadedCults = false;
             foreach (ModContentPack ResolvedMod in LoadedModManager.RunningMods)
             {
-                if (loadedCosmicHorrors && loadedCults) break; //Save some loading
+                if (loadedCosmicHorrors && loadedCults)
+                {
+                    break; //Save some loading
+                }
+
                 if (ResolvedMod.Name.Contains("Call of Cthulhu - Cosmic Horrors"))
                 {
                     DebugReport("Loaded - Call of Cthulhu - Cosmic Horrors");
