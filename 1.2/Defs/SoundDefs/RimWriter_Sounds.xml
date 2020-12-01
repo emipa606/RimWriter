@@ -10,8 +10,8 @@
       <li>
         <muteWhenPaused>True</muteWhenPaused>
         <grains>
-          <li Class="AudioGrain_Folder">
-            <clipFolderPath>Typewriter/ManualTyping</clipFolderPath>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Typewriter/ManualTyping</clipPath>
           </li>
         </grains>
         <volumeRange>
@@ -39,8 +39,8 @@
       <li>
         <muteWhenPaused>True</muteWhenPaused>
         <grains>
-          <li Class="AudioGrain_Folder">
-            <clipFolderPath>WritersTable/PencilWriting</clipFolderPath>
+          <li Class="AudioGrain_Clip">
+            <clipPath>WritersTable/PencilWriting</clipPath>
           </li>
         </grains>
         <volumeRange>
