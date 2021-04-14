@@ -45,7 +45,6 @@ Y
     <techLevel>Neolithic</techLevel>
     <prerequisites>
       <li>RimWriter_TechPrimitiveWriting</li>
-      <li>ComplexFurniture</li>
     </prerequisites>
     <researchViewX>1</researchViewX>
     <researchViewY>0.5</researchViewY>
