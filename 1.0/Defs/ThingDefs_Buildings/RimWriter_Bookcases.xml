@@ -8,6 +8,7 @@
     <uiIconScale>0.45</uiIconScale>
     <researchPrerequisites>
       <li>RimWriter_TechBookshelves</li>
+      <li>ComplexFurniture</li>
     </researchPrerequisites>
     <graphicData>
       <texPath>Building/Production/LibraryBookcase/Jecrell_Bookcase</texPath>
