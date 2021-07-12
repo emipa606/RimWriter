@@ -1,24 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using Verse;
+﻿using Verse;
 
 namespace RimWriter
 {
     public class RoomRoleWorker_Library : RoomRoleWorker
     {
-        
         public override float GetScore(Room room)
         {
             var num = 0;
-            List<Thing> containedAndAdjacentThings = room.ContainedAndAdjacentThings;
-            for (var i = 0; i < containedAndAdjacentThings.Count; i++)
+            var containedAndAdjacentThings = room.ContainedAndAdjacentThings;
+            foreach (var thing in containedAndAdjacentThings)
             {
-                if (containedAndAdjacentThings[i] is Building_Bookcase)
+                if (thing is Building_Bookcase)
                 {
                     num++;
                 }
             }
-            return 13.5f * (float)num;
+
+            return 13.5f * num;
         }
     }
 }

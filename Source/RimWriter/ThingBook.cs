@@ -8,20 +8,7 @@ namespace RimWriter
 {
     public class ThingBook : ThingWithComps
     {
-        CompArt compArt;
-
-        CompArt CompArt
-        {
-            get
-            {
-                if (compArt == null)
-                {
-                    compArt = this.TryGetComp<CompArt>();
-                }
-
-                return compArt;
-            }
-        }
+        private CompArt compArt;
 
         public override string Label
         {
@@ -33,6 +20,19 @@ namespace RimWriter
                 }
 
                 return base.Label;
+            }
+        }
+
+        private CompArt CompArt
+        {
+            get
+            {
+                if (compArt == null)
+                {
+                    compArt = this.TryGetComp<CompArt>();
+                }
+
+                return compArt;
             }
         }
 
@@ -51,18 +51,18 @@ namespace RimWriter
             }
             else
             {
-
-
                 yield return FloatMenuUtility.DecoratePrioritizedTask(
-                    new FloatMenuOption("RimWriter_Read".Translate(Label), delegate()
+                    new FloatMenuOption(
+                        "RimWriter_Read".Translate(Label),
+                        delegate
                         {
                             var job = new Job(DefDatabase<JobDef>.GetNamedSilentFail("RimWriter_ReadABook"), this)
-                            {
-                                count = 1
-                            };
+                                {count = 1};
                             selPawn.jobs.TryTakeOrderedJob(job, JobTag.MiscWork);
                         },
-                        MenuOptionPriority.Low), selPawn, this);
+                        MenuOptionPriority.Low),
+                    selPawn,
+                    this);
             }
         }
 
@@ -77,8 +77,7 @@ namespace RimWriter
             {
                 yield return new Command_Action
                 {
-                    action = () => Destroy(DestroyMode.KillFinalize),
-                    defaultLabel = "RimWriter_Destroy".Translate(),
+                    action = () => Destroy(DestroyMode.KillFinalize), defaultLabel = "RimWriter_Destroy".Translate(),
                     defaultDesc = "RimWriter_DestroyDesc".Translate(Label),
                     icon = ContentFinder<Texture2D>.Get("UI/Commands/jecrellDestroyWriting")
                 };

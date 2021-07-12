@@ -1,47 +1,24 @@
-﻿using RimWorld;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Diagnostics;
-using System.Text;
+using RimWorld;
 using UnityEngine;
 using Verse;
-using Verse.AI;
 
 namespace RimWriter
 {
     public class Item_JournalPage : ThingWithComps
     {
-        private bool IsBook = false;
-        private bool saveOwner = false;
-        private Pawn owner = null;
         private CompArt artComp;
 
-        public override void SpawnSetup(Map map, bool bla)
-        {
-            base.SpawnSetup(map, bla);
-            artComp = GetComp<CompArt>();
-            ResolveOwner();
-        }
+        private bool IsBook;
 
-        public void ResolveOwner()
-        {
-            if (artComp != null)
-            {
-                foreach (Pawn colonist in Map.mapPawns.FreeColonistsSpawned)
-                {
-                    if (colonist.Name.ToStringFull == artComp.AuthorName )
-                    {
-                        owner = colonist;
-                        saveOwner = true;
-                        break;
-                    }
-                }
-            }
-        }
-        
+        private Pawn owner;
+
+        private bool saveOwner;
+
         public void ClaimJournal(Pawn claimant)
         {
-            if (claimant != null && this != null && owner == null)
+            if (claimant != null && owner == null)
             {
                 owner = claimant;
             }
@@ -50,41 +27,61 @@ namespace RimWriter
         public override void ExposeData()
         {
             base.ExposeData();
-            // Save and load the work variables, so they don't default after loading
 
-            Scribe_Values.Look<bool>(ref IsBook, "IsBook", false);
-            Scribe_Values.Look<bool>(ref saveOwner, "saveOwner", false, false);
+            // Save and load the work variables, so they don't default after loading
+            Scribe_Values.Look(ref IsBook, "IsBook");
+            Scribe_Values.Look(ref saveOwner, "saveOwner");
             if (saveOwner)
             {
-                Scribe_References.Look<Pawn>(ref owner, "owner", false);
+                Scribe_References.Look(ref owner, "owner");
             }
         }
-
 
         [DebuggerHidden]
         public override IEnumerable<Gizmo> GetGizmos()
         {
-            IEnumerator<Gizmo> enumerator = base.GetGizmos().GetEnumerator();
+            using var enumerator = base.GetGizmos().GetEnumerator();
             while (enumerator.MoveNext())
             {
-                Gizmo current = enumerator.Current;
+                var current = enumerator.Current;
                 yield return current;
             }
-            
-                yield return new Command_Action
-                {
-                    defaultLabel = "Discard",
-                    icon = ContentFinder<Texture2D>.Get("UI/Commands/Detonate", true),
-                    defaultDesc = "Disposes of unwanted journal pages.",
-                    action = delegate
-                    {
-                        DeSpawn();
-                    },
-                    hotKey = KeyBindingDefOf.Misc3
-                };
 
-            yield break;
+            yield return new Command_Action
+            {
+                defaultLabel = "Discard",
+                icon = ContentFinder<Texture2D>.Get("UI/Commands/Detonate"),
+                defaultDesc = "Disposes of unwanted journal pages.",
+                action = delegate { DeSpawn(); },
+                hotKey = KeyBindingDefOf.Misc3
+            };
         }
 
+        public void ResolveOwner()
+        {
+            if (artComp == null)
+            {
+                return;
+            }
+
+            foreach (var colonist in Map.mapPawns.FreeColonistsSpawned)
+            {
+                if (colonist.Name.ToStringFull != artComp.AuthorName)
+                {
+                    continue;
+                }
+
+                owner = colonist;
+                saveOwner = true;
+                break;
+            }
+        }
+
+        public override void SpawnSetup(Map map, bool bla)
+        {
+            base.SpawnSetup(map, bla);
+            artComp = GetComp<CompArt>();
+            ResolveOwner();
+        }
     }
 }
