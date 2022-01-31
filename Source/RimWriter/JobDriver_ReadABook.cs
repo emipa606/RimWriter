@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -10,7 +10,6 @@ namespace RimWriter
     {
         protected const TargetIndex TargetThingIndex = TargetIndex.A;
 
-        // Token: 0x060003BE RID: 958 RVA: 0x00025D2C File Offset: 0x0002412C
         public static Toil CarryBookToReadSpot(Pawn pawn, TargetIndex ingestibleInd)
         {
             var toil = new Toil();

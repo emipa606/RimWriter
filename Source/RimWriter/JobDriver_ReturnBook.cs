@@ -1,40 +1,30 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using RimWorld;
 using Verse;
 using Verse.AI;
 
 namespace RimWriter
 {
-    // Token: 0x02000061 RID: 97
     public class JobDriver_ReturnBook : JobDriver
     {
-        // Token: 0x040001F8 RID: 504
         private const TargetIndex CorpseIndex = TargetIndex.A;
 
-        // Token: 0x040001F9 RID: 505
         private const TargetIndex GraveIndex = TargetIndex.B;
 
-        // Token: 0x060002A5 RID: 677 RVA: 0x00018AF3 File Offset: 0x00016EF3
         public JobDriver_ReturnBook()
         {
             rotateToFace = TargetIndex.B;
         }
 
-        // Token: 0x1700008D RID: 141
-        // (get) Token: 0x060002A6 RID: 678 RVA: 0x00018B04 File Offset: 0x00016F04
         private ThingBook Book => (ThingBook) job.GetTarget(TargetIndex.A).Thing;
 
-        // Token: 0x1700008E RID: 142
-        // (get) Token: 0x060002A7 RID: 679 RVA: 0x00018B2C File Offset: 0x00016F2C
         private Building_InternalStorage Storage => (Building_InternalStorage) job.GetTarget(TargetIndex.B).Thing;
 
-        // Token: 0x060002A8 RID: 680 RVA: 0x00018B54 File Offset: 0x00016F54
         public override bool TryMakePreToilReservations(bool b)
         {
             return pawn.Reserve(Book, job) && pawn.Reserve(Book, job);
         }
 
-        // Token: 0x060002A9 RID: 681 RVA: 0x00018BA8 File Offset: 0x00016FA8
         protected override IEnumerable<Toil> MakeNewToils()
         {
             this.FailOnDestroyedNullOrForbidden(TargetIndex.A);

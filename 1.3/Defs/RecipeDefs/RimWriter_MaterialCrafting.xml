@@ -40,6 +40,7 @@
         <li>WoodLog</li>
       </thingDefs>
     </fixedIngredientFilter>
+    <researchPrerequisite>RimWriter_TechHandWriting</researchPrerequisite>
   </RecipeDef>
   <RecipeDef ParentName="RimWriter_MakeParchment">
     <defName>RimWriter_MakeParchmentFast</defName>
@@ -81,6 +82,7 @@
         <li>Leathers</li>
       </categories>
     </fixedIngredientFilter>
+    <researchPrerequisite>RimWriter_TechHandWriting</researchPrerequisite>
   </RecipeDef>
   <RecipeDef ParentName="RimWriter_MakeClothPaper">
     <defName>RimWriter_MakeClothPaperFast</defName>
@@ -122,5 +124,6 @@
         <li>Cloth</li>
       </thingDefs>
     </fixedIngredientFilter>
+    <researchPrerequisite>RimWriter_TechHandWriting</researchPrerequisite>
   </RecipeDef>
 </Defs>

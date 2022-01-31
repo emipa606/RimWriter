@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <name>RimWriter - Books, Scrolls, Tablets, and Libraries (Continued)</name>
   <packageId>Mlie.RimWriter</packageId>
@@ -21,7 +21,7 @@
   <loadAfter>
     <li>brrainz.harmony</li>
   </loadAfter>
-  <description>[img]https://i.imgur.com/WAEzk68.png[/img]
+  <description>[img]https://i.imgur.com/buuPQel.png[/img]
 Update of Jecrells mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=1521844535
 
@@ -29,7 +29,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1521844535
 - This will be removed when/if Jecrell comes back
 - Added chinese translation based on the mod by leafzxg
 
-[img]https://i.imgur.com/7Gzt3Rg.png[/img]
+[img]https://i.imgur.com/pufA0kM.png[/img]
 
 [table]
 	[tr]
@@ -38,7 +38,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1521844535
 	[/tr]
 [/table]
 	
-[img]https://i.imgur.com/NOW7jU1.png[/img]
+[img]https://i.imgur.com/Z4GOv8H.png[/img]
 
 Add tablets, books, scrolls, libraries, and more to your RimWorld playthroughs.
 
@@ -56,7 +56,7 @@ RimWriter is a mod that adds a lot of content focused on writing to supplement t
   * Stone shelves for tablets
   * Scrollcases, tall and short
   * Bookcases, tall and short
-  * Writer&apos;s tables
+  * Writer's tables
   * A typewriter
 
 [h1]-Features[/h1]
@@ -76,7 +76,7 @@ Yes.
 No.
 
 
-[img]https://i.imgur.com/Rs6T6cr.png[/img]
+[img]https://i.imgur.com/PwoNOj4.png[/img]
 [list]
 [*] See if the the error persists if you just have this mod and its requirements active.
 [*] If not, try adding your other mods until it happens again.
@@ -85,6 +85,5 @@ No.
 [*] Do not report errors by making a discussion-thread, I get no notification of that.
 [*] If you have the solution for a problem, please post it to the GitHub repository.
 [/list]
-
 </description>
 </ModMetaData>
