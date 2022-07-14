@@ -2,136 +2,135 @@
 using RimWorld;
 using Verse;
 
-namespace RimWriter
+namespace RimWriter;
+
+public class Building_InternalStorage : Building, IThingHolder, IStoreSettingsParent
 {
-    public class Building_InternalStorage : Building, IThingHolder, IStoreSettingsParent
+    private CompStorageGraphic compStorageGraphic;
+    protected ThingOwner innerContainer;
+
+    private StorageSettings storageSettings;
+
+    public Building_InternalStorage()
     {
-        private CompStorageGraphic compStorageGraphic;
-        protected ThingOwner innerContainer;
+        innerContainer = new ThingOwner<Thing>(this, false);
+    }
 
-        private StorageSettings storageSettings;
-
-        public Building_InternalStorage()
+    public CompStorageGraphic CompStorageGraphic
+    {
+        get
         {
-            innerContainer = new ThingOwner<Thing>(this, false);
-        }
-
-        public CompStorageGraphic CompStorageGraphic
-        {
-            get
+            if (compStorageGraphic == null)
             {
-                if (compStorageGraphic == null)
-                {
-                    compStorageGraphic = this.TryGetComp<CompStorageGraphic>();
-                }
-
-                return compStorageGraphic;
-            }
-        }
-
-        public override Graphic Graphic
-        {
-            get
-            {
-                if (CompStorageGraphic?.CurStorageGraphic != null)
-                {
-                    return CompStorageGraphic.CurStorageGraphic;
-                }
-
-                return base.Graphic;
-            }
-        }
-
-        public bool StorageTabVisible => true;
-
-        public StorageSettings GetParentStoreSettings()
-        {
-            return def.building.fixedStorageSettings;
-        }
-
-        public StorageSettings GetStoreSettings()
-        {
-            return storageSettings;
-        }
-
-        public void GetChildHolders(List<IThingHolder> outChildren)
-        {
-            ThingOwnerUtility.AppendThingHoldersFromThings(outChildren, GetDirectlyHeldThings());
-        }
-
-        public ThingOwner GetDirectlyHeldThings()
-        {
-            return innerContainer;
-        }
-
-        public bool Accepts(Thing thing)
-        {
-            if (!storageSettings.AllowedToAccept(thing))
-            {
-                return false;
+                compStorageGraphic = this.TryGetComp<CompStorageGraphic>();
             }
 
-            if (innerContainer.Count + 1 > CompStorageGraphic.Props.countFullCapacity)
+            return compStorageGraphic;
+        }
+    }
+
+    public override Graphic Graphic
+    {
+        get
+        {
+            if (CompStorageGraphic?.CurStorageGraphic != null)
             {
-                return false;
+                return CompStorageGraphic.CurStorageGraphic;
             }
 
-            return true;
+            return base.Graphic;
+        }
+    }
+
+    public bool StorageTabVisible => true;
+
+    public StorageSettings GetParentStoreSettings()
+    {
+        return def.building.fixedStorageSettings;
+    }
+
+    public StorageSettings GetStoreSettings()
+    {
+        return storageSettings;
+    }
+
+    public void GetChildHolders(List<IThingHolder> outChildren)
+    {
+        ThingOwnerUtility.AppendThingHoldersFromThings(outChildren, GetDirectlyHeldThings());
+    }
+
+    public ThingOwner GetDirectlyHeldThings()
+    {
+        return innerContainer;
+    }
+
+    public bool Accepts(Thing thing)
+    {
+        if (!storageSettings.AllowedToAccept(thing))
+        {
+            return false;
         }
 
-        public override void ExposeData()
+        if (innerContainer.Count + 1 > CompStorageGraphic.Props.countFullCapacity)
         {
-            base.ExposeData();
-            Scribe_Deep.Look(ref innerContainer, "innerContainer", this);
-            Scribe_Deep.Look(ref storageSettings, "storageSettings", this);
+            return false;
         }
 
-        public override void PostMake()
+        return true;
+    }
+
+    public override void ExposeData()
+    {
+        base.ExposeData();
+        Scribe_Deep.Look(ref innerContainer, "innerContainer", this);
+        Scribe_Deep.Look(ref storageSettings, "storageSettings", this);
+    }
+
+    public override void PostMake()
+    {
+        base.PostMake();
+        storageSettings = new StorageSettings(this);
+        if (def.building.defaultStorageSettings != null)
         {
-            base.PostMake();
-            storageSettings = new StorageSettings(this);
-            if (def.building.defaultStorageSettings != null)
-            {
-                storageSettings.CopyFrom(def.building.defaultStorageSettings);
-            }
+            storageSettings.CopyFrom(def.building.defaultStorageSettings);
+        }
+    }
+
+    public bool TryAccept(Thing thing)
+    {
+        return true;
+    }
+
+    public void TryDrop(Thing item, bool forbid = true)
+    {
+        if (!innerContainer.Contains(item))
+        {
+            return;
         }
 
-        public bool TryAccept(Thing thing)
+        innerContainer.TryDrop(item, ThingPlaceMode.Near, out var outThing);
+        if (forbid)
         {
-            return true;
+            outThing.SetForbidden(true);
         }
+    }
 
-        public void TryDrop(Thing item, bool forbid = true)
+    public bool TryDropRandom(out Thing droppedThing, bool forbid = false)
+    {
+        droppedThing = null;
+        if (innerContainer.Count > 0)
         {
-            if (!innerContainer.Contains(item))
-            {
-                return;
-            }
-
-            innerContainer.TryDrop(item, ThingPlaceMode.Near, out var outThing);
+            innerContainer.TryDrop(innerContainer.RandomElement(), ThingPlaceMode.Near, out var outThing);
             if (forbid)
             {
                 outThing.SetForbidden(true);
             }
+
+            droppedThing = outThing as ThingBook;
+            return true;
         }
 
-        public bool TryDropRandom(out Thing droppedThing, bool forbid = false)
-        {
-            droppedThing = null;
-            if (innerContainer.Count > 0)
-            {
-                innerContainer.TryDrop(innerContainer.RandomElement(), ThingPlaceMode.Near, out var outThing);
-                if (forbid)
-                {
-                    outThing.SetForbidden(true);
-                }
-
-                droppedThing = outThing as ThingBook;
-                return true;
-            }
-
-            Log.Warning("Building_InternalStorage : TryDropRandom - failed to get a book.");
-            return false;
-        }
+        Log.Warning("Building_InternalStorage : TryDropRandom - failed to get a book.");
+        return false;
     }
 }
