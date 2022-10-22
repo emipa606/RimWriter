@@ -1,11 +1,10 @@
 ﻿using UnityEngine;
 using Verse;
 
-namespace RimWriter
+namespace RimWriter;
+
+[StaticConstructorOnStartup]
+internal class ITabButton
 {
-    [StaticConstructorOnStartup]
-    internal class ITabButton
-    {
-        public static readonly Texture2D Drop = ContentFinder<Texture2D>.Get("UI/Buttons/Drop");
-    }
+    public static readonly Texture2D Drop = ContentFinder<Texture2D>.Get("UI/Buttons/Drop");
 }

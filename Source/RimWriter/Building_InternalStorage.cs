@@ -42,6 +42,10 @@ public class Building_InternalStorage : Building, IThingHolder, IStoreSettingsPa
         }
     }
 
+    public void Notify_SettingsChanged()
+    {
+    }
+
     public bool StorageTabVisible => true;
 
     public StorageSettings GetParentStoreSettings()
@@ -71,12 +75,7 @@ public class Building_InternalStorage : Building, IThingHolder, IStoreSettingsPa
             return false;
         }
 
-        if (innerContainer.Count + 1 > CompStorageGraphic.Props.countFullCapacity)
-        {
-            return false;
-        }
-
-        return true;
+        return innerContainer.Count + 1 <= CompStorageGraphic.Props.countFullCapacity;
     }
 
     public override void ExposeData()

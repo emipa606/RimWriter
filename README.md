@@ -8,6 +8,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1521844535
 - This is an unofficial port
 - This will be removed when/if Jecrell comes back
 - Added chinese translation based on the mod by leafzxg
+- Also checkout the https://steamcommunity.com/sharedfiles/filedetails/?id=2859447345]RimWriter Addon by greensniperhat
 
 ![Image](https://i.imgur.com/pufA0kM.png)
 
@@ -65,6 +66,7 @@ No.
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
+
 
 
 
