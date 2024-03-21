@@ -144,6 +144,10 @@ public class Building_Typewriter : Building_WorkTable
             return list;
         }
 
+        list.Add(new FloatMenuOption("Practice writing", action0));
+
+        return list;
+
         void action0()
         {
             var job = new Job(DefDatabase<JobDef>.GetNamed("RimWriter_FreeWrite"), this, building);
@@ -153,10 +157,6 @@ public class Building_Typewriter : Building_WorkTable
                 // Lala
             }
         }
-
-        list.Add(new FloatMenuOption("Practice writing", action0));
-
-        return list;
     }
 
     // ===================== Inspections =====================
@@ -198,7 +198,7 @@ public class Building_Typewriter : Building_WorkTable
 
     /// <summary>
     ///     This is used, when the Ticker in the XML is set to 'Rare'
-    ///     This is a tick thats done once every 250 normal Ticks
+    ///     This is a tick that's done once every 250 normal Ticks
     /// </summary>
     public override void TickRare()
     {

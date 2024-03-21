@@ -59,6 +59,15 @@ public class WorkGiver_ReturnBooks : WorkGiver_Scanner
 
     private Building_InternalStorage FindBestStorage(Pawn p, Thing book)
     {
+        var position = book.Position;
+        var map = book.Map;
+        var searchSet = book.Map.listerThings.AllThings.FindAll(x => x is Building_InternalStorage);
+        var peMode = PathEndMode.ClosestTouch;
+        var traverseParams = TraverseParms.For(p);
+        Predicate<Thing> validator = predicate;
+        return (Building_InternalStorage)GenClosest.ClosestThing_Global_Reachable(position, map, searchSet, peMode,
+            traverseParams, 9999f, validator, priorityGetter);
+
         bool predicate(Thing m)
         {
             return !m.IsForbidden(p) && p.CanReserveNew(m) && ((Building_InternalStorage)m).Accepts(book);
@@ -75,14 +84,5 @@ public class WorkGiver_ReturnBooks : WorkGiver_Scanner
 
             return result;
         }
-
-        var position = book.Position;
-        var map = book.Map;
-        var searchSet = book.Map.listerThings.AllThings.FindAll(x => x is Building_InternalStorage);
-        var peMode = PathEndMode.ClosestTouch;
-        var traverseParams = TraverseParms.For(p);
-        Predicate<Thing> validator = predicate;
-        return (Building_InternalStorage)GenClosest.ClosestThing_Global_Reachable(position, map, searchSet, peMode,
-            traverseParams, 9999f, validator, priorityGetter);
     }
 }

@@ -29,18 +29,7 @@ public class Building_InternalStorage : Building, IThingHolder, IStoreSettingsPa
         }
     }
 
-    public override Graphic Graphic
-    {
-        get
-        {
-            if (CompStorageGraphic?.CurStorageGraphic != null)
-            {
-                return CompStorageGraphic.CurStorageGraphic;
-            }
-
-            return base.Graphic;
-        }
-    }
+    public override Graphic Graphic => CompStorageGraphic?.CurStorageGraphic ?? base.Graphic;
 
     public void Notify_SettingsChanged()
     {

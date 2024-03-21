@@ -23,7 +23,7 @@ public class ITab_Inventory : ITab
 
     private static readonly Color ThingLabelColor = new Color(0.9f, 0.9f, 0.9f, 1f);
 
-    private static readonly List<Thing> workingInvList = new List<Thing>();
+    private static readonly List<Thing> workingInvList = [];
 
     private Vector2 scrollPosition = Vector2.zero;
 
@@ -37,7 +37,7 @@ public class ITab_Inventory : ITab
     // {
     // return base.SelPawn;
     // }
-    // Corpse corpse = base.SelThing as Corpse;
+    // Corpse = base.SelThing as Corpse;
     // if (corpse != null)
     // {
     // return corpse.InnerPawn;
@@ -117,7 +117,7 @@ public class ITab_Inventory : ITab
             workingInvList.AddRange(t);
             foreach (var thing in workingInvList)
             {
-                DrawThingRow(ref num, viewRect.width, thing, true);
+                DrawThingRow(ref num, viewRect.width, thing);
             }
         }
 
@@ -132,7 +132,7 @@ public class ITab_Inventory : ITab
         Text.Anchor = TextAnchor.UpperLeft;
     }
 
-    private void DrawThingRow(ref float y, float width, Thing thing, bool inventory = false)
+    private void DrawThingRow(ref float y, float width, Thing thing)
     {
         var rect = new Rect(0f, y, width, 28f);
         Widgets.InfoCardButton(rect.width - 24f, y, thing);

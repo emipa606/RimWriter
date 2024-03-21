@@ -19,6 +19,33 @@ public class JobDriver_ReadABook : JobDriver
             var intVec = IntVec3.Invalid;
             var unused = actor.CurJob.GetTarget(ingestibleInd).Thing;
 
+            var thing = GenClosest.ClosestThingReachable(actor.Position, actor.Map,
+                ThingRequest.ForGroup(ThingRequestGroup.BuildingArtificial), PathEndMode.OnCell,
+                TraverseParms.For(actor), 25f,
+                t => baseChairValidator(t) && t.Position.GetDangerFor(pawn, t.Map) == Danger.None);
+            if (thing == null)
+            {
+                intVec = RCellFinder.SpotToChewStandingNear(actor, actor.CurJob.GetTarget(ingestibleInd).Thing);
+                var chewSpotDanger = intVec.GetDangerFor(pawn, actor.Map);
+                if (chewSpotDanger != Danger.None)
+                {
+                    thing = GenClosest.ClosestThingReachable(actor.Position, actor.Map,
+                        ThingRequest.ForGroup(ThingRequestGroup.BuildingArtificial), PathEndMode.OnCell,
+                        TraverseParms.For(actor), 25f,
+                        t => baseChairValidator(t) && t.Position.GetDangerFor(pawn, t.Map) <= chewSpotDanger);
+                }
+            }
+
+            if (thing != null)
+            {
+                intVec = thing.Position;
+                actor.Reserve(thing, actor.CurJob);
+            }
+
+            actor.Map.pawnDestinationReservationManager.Reserve(actor, actor.CurJob, intVec);
+            actor.pather.StartPath(intVec, PathEndMode.OnCell);
+            return;
+
             bool baseChairValidator(Thing t)
             {
                 if (t.def.building is not { isSittable: true })
@@ -67,38 +94,12 @@ public class JobDriver_ReadABook : JobDriver
 
                 return result;
             }
-
-            var thing = GenClosest.ClosestThingReachable(actor.Position, actor.Map,
-                ThingRequest.ForGroup(ThingRequestGroup.BuildingArtificial), PathEndMode.OnCell,
-                TraverseParms.For(actor), 25f,
-                t => baseChairValidator(t) && t.Position.GetDangerFor(pawn, t.Map) == Danger.None);
-            if (thing == null)
-            {
-                intVec = RCellFinder.SpotToChewStandingNear(actor, actor.CurJob.GetTarget(ingestibleInd).Thing);
-                var chewSpotDanger = intVec.GetDangerFor(pawn, actor.Map);
-                if (chewSpotDanger != Danger.None)
-                {
-                    thing = GenClosest.ClosestThingReachable(actor.Position, actor.Map,
-                        ThingRequest.ForGroup(ThingRequestGroup.BuildingArtificial), PathEndMode.OnCell,
-                        TraverseParms.For(actor), 25f,
-                        t => baseChairValidator(t) && t.Position.GetDangerFor(pawn, t.Map) <= chewSpotDanger);
-                }
-            }
-
-            if (thing != null)
-            {
-                intVec = thing.Position;
-                actor.Reserve(thing, actor.CurJob);
-            }
-
-            actor.Map.pawnDestinationReservationManager.Reserve(actor, actor.CurJob, intVec);
-            actor.pather.StartPath(intVec, PathEndMode.OnCell);
         };
         toil.defaultCompleteMode = ToilCompleteMode.PatherArrival;
         return toil;
     }
 
-    public override bool ModifyCarriedThingDrawPos(ref Vector3 drawPos, ref bool behind, ref bool flip)
+    public override bool ModifyCarriedThingDrawPos(ref Vector3 drawPos, ref bool flip)
     {
         if (pawn.Rotation == Rot4.East)
         {
@@ -111,7 +112,7 @@ public class JobDriver_ReadABook : JobDriver
             flip = false;
         }
 
-        behind = pawn.Rotation == Rot4.North;
+        //behind = pawn.Rotation == Rot4.North;
 
         return true;
     }

@@ -59,13 +59,14 @@ public class Building_Bookcase : Building_InternalStorage
                     text = "RimWriter_BookTitle".Translate(compArt.Title, compArt.AuthorName);
                 }
 
+                list.Add(new FloatMenuOption(text, delegate { TryDrop(current); }, MenuOptionPriority.Default,
+                    null, null, 29f, extraPartOnGUI));
+                continue;
+
                 bool extraPartOnGUI(Rect rect)
                 {
                     return Widgets.InfoCardButton(rect.x + 5f, rect.y + ((rect.height - 24f) / 2f), current);
                 }
-
-                list.Add(new FloatMenuOption(text, delegate { TryDrop(current); }, MenuOptionPriority.Default,
-                    null, null, 29f, extraPartOnGUI));
             }
         }
 

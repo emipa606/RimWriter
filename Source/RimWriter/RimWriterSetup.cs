@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using RimWorld;
 using Verse;
 
@@ -20,14 +19,13 @@ public static class RimWriterSetup
         var cultsGrimoire = DefDatabase<ThingDef>.GetNamedSilentFail("Cults_Grimoire");
         if (cultsGrimoire != null)
         {
-            cultsGrimoire.thingCategories = new List<ThingCategoryDef> { ThingCategoryDef.Named("RimWriter_Books") };
+            cultsGrimoire.thingCategories = [ThingCategoryDef.Named("RimWriter_Books")];
         }
 
         var cultsKingInYellow = DefDatabase<ThingDef>.GetNamedSilentFail("Cults_TheKingInYellow");
         if (cultsKingInYellow != null)
         {
-            cultsKingInYellow.thingCategories = new List<ThingCategoryDef>
-                { ThingCategoryDef.Named("RimWriter_Books") };
+            cultsKingInYellow.thingCategories = [ThingCategoryDef.Named("RimWriter_Books")];
         }
     }
 }

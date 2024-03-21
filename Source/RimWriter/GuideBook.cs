@@ -14,15 +14,7 @@ public class GuideBook : ThingBook
 
     private Color? skillColor;
 
-    private SkillDef skillDef;
-
-    public GuideBook()
-    {
-        if (skillDef == null)
-        {
-            skillDef = DefDatabase<SkillDef>.GetRandom();
-        }
-    }
+    private SkillDef skillDef = DefDatabase<SkillDef>.GetRandom();
 
     [CanBeNull]
     public string Author
