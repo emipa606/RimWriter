@@ -10,7 +10,7 @@ public class JobDriver_ReadABook : JobDriver
 {
     protected const TargetIndex TargetThingIndex = TargetIndex.A;
 
-    public static Toil CarryBookToReadSpot(Pawn pawn, TargetIndex ingestibleInd)
+    private static Toil carryBookToReadSpot(Pawn pawn, TargetIndex ingestibleInd)
     {
         var toil = new Toil();
         toil.initAction = delegate
@@ -112,8 +112,6 @@ public class JobDriver_ReadABook : JobDriver
             flip = false;
         }
 
-        //behind = pawn.Rotation == Rot4.North;
-
         return true;
     }
 
@@ -150,21 +148,21 @@ public class JobDriver_ReadABook : JobDriver
         };
         yield return Toils_Reserve.Reserve(TargetIndex.B);
         yield return Toils_Ingest.PickupIngestible(TargetIndex.B, pawn);
-        yield return CarryBookToReadSpot(pawn, TargetIndex.B);
+        yield return carryBookToReadSpot(pawn, TargetIndex.B);
         yield return Toils_Ingest.FindAdjacentEatSurface(TargetIndex.C, TargetIndex.B);
         var wait = Toils_General.Wait(job.def.joyDuration);
         wait.FailOnCannotTouch(TargetIndex.B, PathEndMode.Touch);
-        wait.tickAction = ReadTickAction;
+        wait.tickIntervalAction = readTickAction;
         yield return wait;
         var libraryThoughtToil = new Toil { initAction = delegate { RimWriterUtility.TryGainLibraryThought(pawn); } };
         yield return libraryThoughtToil;
         yield return Toils_Reserve.Release(TargetIndex.B);
     }
 
-    protected void ReadTickAction()
+    private void readTickAction(int delta)
     {
         pawn.rotationTracker.FaceCell(TargetB.Cell);
-        pawn.GainComfortFromCellIfPossible();
+        pawn.GainComfortFromCellIfPossible(delta);
         var statValue = TargetThingA.GetStatValue(StatDefOf.JoyGainFactor);
         var pawn1 = pawn;
         if (TargetThingA is GuideBook gBook)
@@ -172,6 +170,6 @@ public class JobDriver_ReadABook : JobDriver
             gBook.Teach(pawn1);
         }
 
-        JoyUtility.JoyTickCheckEnd(pawn1, JoyTickFullJoyAction.GoToNextToil, statValue);
+        JoyUtility.JoyTickCheckEnd(pawn1, delta, JoyTickFullJoyAction.GoToNextToil, statValue);
     }
 }

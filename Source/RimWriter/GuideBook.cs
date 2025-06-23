@@ -17,7 +17,7 @@ public class GuideBook : ThingBook
     private SkillDef skillDef = DefDatabase<SkillDef>.GetRandom();
 
     [CanBeNull]
-    public string Author
+    private string Author
     {
         get
         {
@@ -42,9 +42,9 @@ public class GuideBook : ThingBook
         }
     }
 
-    public CompArt CompArt => this.TryGetComp<CompArt>();
+    private CompArt CompArt => this.TryGetComp<CompArt>();
 
-    public CompQuality CompQuality => this.TryGetComp<CompQuality>();
+    private CompQuality CompQuality => this.TryGetComp<CompQuality>();
 
     public override string DescriptionFlavor =>
         "RimWriter_GuideSkillDesc".Translate(skillDef.label, QualityRate.ToStringPercent()) + "\n" +
@@ -67,19 +67,12 @@ public class GuideBook : ThingBook
             }
 
             return base.Label;
-
-            // var compArt = new CompArt();
-            // this.AllComps.Add(compArt);
-            // var authorNameInt = Traverse.Create(CompArt).Field("authorNameInt").GetValue<string>();
-            // return (authorNameInt.NullOrEmpty())
-            // ? "RimWriter_GuideTitle".Translate(skillDef.LabelCap) + " (" + CompQuality.Quality.GetLabel() + ")"
-            // : "RimWriter_GuideTitleWithAuthor".Translate(CompArt.AuthorName, skillDef.LabelCap) + " (" + CompQuality.Quality.GetLabel() + ")";
         }
     }
 
-    public float LearnRate => learnRate * QualityRate;
+    private float LearnRate => learnRate * QualityRate;
 
-    public float QualityRate
+    private float QualityRate
     {
         get
         {
@@ -88,7 +81,7 @@ public class GuideBook : ThingBook
                 case QualityCategory.Awful:
                     return 0.25f;
                 case QualityCategory.Poor:
-                    return 0.5f;
+                    break;
                 case QualityCategory.Normal:
                     return 0.75f;
                 case QualityCategory.Good:
@@ -105,7 +98,7 @@ public class GuideBook : ThingBook
         }
     }
 
-    public Color SkillColor
+    private Color SkillColor
     {
         get
         {
@@ -180,10 +173,7 @@ public class GuideBook : ThingBook
     public override void SpawnSetup(Map map, bool respawningAfterLoad)
     {
         base.SpawnSetup(map, respawningAfterLoad);
-        if (skillDef == null)
-        {
-            skillDef = DefDatabase<SkillDef>.GetRandom();
-        }
+        skillDef ??= DefDatabase<SkillDef>.GetRandom();
     }
 
     public void Teach(Pawn pawn)

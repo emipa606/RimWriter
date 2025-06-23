@@ -31,12 +31,12 @@ public class JobDriver_FreeWrite : JobDriver
         toil.PlaySustainerOrSound(TargetThingA?.def?.defName == "RimWriter_TableTypewriter"
             ? DefDatabase<SoundDef>.GetNamed("RimWriter_SoundManualTypewriter")
             : DefDatabase<SoundDef>.GetNamed("RimWriter_SoundManualPencil"));
-        toil.tickAction = delegate
+        toil.tickIntervalAction = delegate(int delta)
         {
             pawn.rotationTracker.FaceCell(TargetA.Cell);
-            pawn.GainComfortFromCellIfPossible();
+            pawn.GainComfortFromCellIfPossible(delta);
             var statValue = TargetThingA.GetStatValue(StatDefOf.JoyGainFactor);
-            JoyUtility.JoyTickCheckEnd(pawn, JoyTickFullJoyAction.GoToNextToil, statValue);
+            JoyUtility.JoyTickCheckEnd(pawn, delta, JoyTickFullJoyAction.GoToNextToil, statValue);
         };
         toil.defaultCompleteMode = ToilCompleteMode.Delay;
         toil.defaultDuration = job.def.joyDuration;

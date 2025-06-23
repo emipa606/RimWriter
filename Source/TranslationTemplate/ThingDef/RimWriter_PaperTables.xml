@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: papermaking table -->
+  <RimWriter_PapermakingBench.label>papermaking table</RimWriter_PapermakingBench.label>
+  <!-- EN: A station that allows for the creation of paper. It features a manual grinder, pulp collector, paper framer, paper press, and various tools to produce the different types of paper, parchment, and more. -->
+  <RimWriter_PapermakingBench.description>A station that allows for the creation of paper. It features a manual grinder, pulp collector, paper framer, paper press, and various tools to produce the different types of paper, parchment, and more.</RimWriter_PapermakingBench.description>
+  <!-- EN: electric papermaking station -->
+  <RimWriter_PapermakingBenchElectric.label>electric papermaking station</RimWriter_PapermakingBenchElectric.label>
+  <!-- EN: A table that allows for the creation of paper. It features a pulp collector, paper framer, and paper press. -->
+  <RimWriter_PapermakingBenchElectric.description>A table that allows for the creation of paper. It features a pulp collector, paper framer, and paper press.</RimWriter_PapermakingBenchElectric.description>
+</LanguageData>

@@ -2,9 +2,7 @@ namespace RimWriter;
 
 public static class ModProps
 {
-    public static readonly string main = "Jecrell";
+    public const string Main = "Jecrell";
 
-    public static readonly string mod = "RimWriter";
-
-    // public static string Version => Assembly.GetExecutingAssembly().GetName().Version.ToString();
+    public const string Mod = "RimWriter";
 }

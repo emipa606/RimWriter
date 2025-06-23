@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: materials for books -->
+  <RimWriter_BookMaterials.label>materials for books</RimWriter_BookMaterials.label>
+  <!-- EN: books -->
+  <RimWriter_Books.label>books</RimWriter_Books.label>
+  <!-- EN: scrolls -->
+  <RimWriter_Scrolls.label>scrolls</RimWriter_Scrolls.label>
+  <!-- EN: tablets -->
+  <RimWriter_Tablets.label>tablets</RimWriter_Tablets.label>
+  <!-- EN: writings -->
+  <RimWriter_Writings.label>writings</RimWriter_Writings.label>
+</LanguageData>

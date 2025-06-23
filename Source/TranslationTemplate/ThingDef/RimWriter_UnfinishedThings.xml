@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: unfinished writing -->
+  <UnfinishedWriting.label>unfinished writing</UnfinishedWriting.label>
+  <!-- EN: unfinished writing (scroll) -->
+  <UnfinishedWritingScroll.label>unfinished writing (scroll)</UnfinishedWritingScroll.label>
+  <!-- EN: unfinished writing (tablet) -->
+  <UnfinishedWritingTablet.label>unfinished writing (tablet)</UnfinishedWritingTablet.label>
+</LanguageData>

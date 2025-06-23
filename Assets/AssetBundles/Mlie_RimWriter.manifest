@@ -1,0 +1,136 @@
+ManifestFileVersion: 0
+CRC: 2434141629
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: dfc4e0952fa35f2e3f6ba40f28db43a2
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ce3b6d18a872ca8039cd5eb3c4fb7ef5
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: dfc4e0952fa35f2e3f6ba40f28db43a2
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 83
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Data/Mlie.RimWriter/Textures/Item/Resource/Journal/Jecrell_Journal - Copy.png
+- Assets/Data/Mlie.RimWriter/Textures/Item/Resource/Journal/Jecrell_Tablet.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/LibraryScrollcase/Jecrell_Scrollcase_north.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/ShortBookcase/Jecrell_ShortBookcaseSparse_northm.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/LibraryBookcase/Jecrell_Bookcase_north.png
+- Assets/Data/Mlie.RimWriter/Textures/Item/Resource/Journal/Jecrell_JournalBook -
+  Copy.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/LibraryScrollcase/Jecrell_ScrollcaseSparse_north.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/ShortBookcase/Jecrell_ShortBookcase_eastm.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/LibraryBookcase/Jecrell_BookcaseEmpty_southm.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/LibraryBookcase/Jecrell_BookcaseEmpty_south.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/LibraryScrollcase/Jecrell_ScrollcaseSparse_eastm.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/WritersTable/Jecrell_WritersTable_eastm.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/ShortScrollcase/Jecrell_ShortScrollcase_southm.png
+- Assets/Data/Mlie.RimWriter/Textures/Item/Resource/Journal/Jecrell_JournalBook_m.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/ShortBookcase/Jecrell_ShortBookcase_northm.png
+- Assets/Data/Mlie.RimWriter/Textures/Item/Resource/Journal/Jecrell_Book - Copy.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/LibraryScrollcase/Jecrell_ScrollcaseEmpty_east.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/ShortBookcase/Jecrell_ShortBookcase_north.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/ShortBookcase/Jecrell_ShortBookcaseEmpty_south.png
+- Assets/Data/Mlie.RimWriter/Textures/Item/Unfinished/Jecrell_Tablet.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/ShortScrollcase/Jecrell_ShortScrollcaseSparse_north.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/PaperTableElectric/jecrellTablePaperElectric_southm.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/LibraryScrollcase/Jecrell_Scrollcase_southm.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/TypewriterTable/Jecrell_TypewriterTable_east.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/TypewriterTable/Jecrell_TypewriterTable_north.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/LibraryBookcase/Jecrell_Bookcase_eastm.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/ShortBookcase/Jecrell_ShortBookcaseEmpty_southm.png
+- Assets/Data/Mlie.RimWriter/Sounds/WritersTable/PencilWriting.ogg
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/PaperTable/jecrellTablePaper_north.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/ShortScrollcase/Jecrell_ShortScrollcaseEmpty_south.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/WritersTable/Jecrell_WritersTable_east.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/TypewriterTable/Jecrell_TypewriterTable_northm.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/LibraryScrollcase/Jecrell_Scrollcase_east.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/ShortScrollcase/Jecrell_ShortScrollcase_north.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/ShortBookcase/Jecrell_ShortBookcaseSparse_north.png
+- Assets/Data/Mlie.RimWriter/Textures/Item/Resource/Journal/Jecrell_Scroll.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/LibraryScrollcase/Jecrell_ScrollcaseSparse_east.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/LibraryBookcase/Jecrell_Bookcase_east.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/ShortBookcase/Jecrell_ShortBookcaseEmpty_east.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/ShortScrollcase/Jecrell_ShortScrollcaseEmpty_north.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/LibraryBookcase/Jecrell_BookcaseEmpty_eastm.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/LibraryScrollcase/Jecrell_Scrollcase_northm.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/ShortBookcase/Jecrell_ShortBookcaseSparse_east.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/LibraryScrollcase/Jecrell_ScrollcaseSparse_south.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/LibraryBookcase/Jecrell_BookcaseSparse_southm.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Furniture/jecrellStoneShelf_north.png
+- Assets/Data/Mlie.RimWriter/Textures/Item/Resource/Journal/Jecrell_Book_m.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/LibraryScrollcase/Jecrell_ScrollcaseEmpty_northm.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/WritersTable/Jecrell_WritersTable_south.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/LibraryScrollcase/Jecrell_Scrollcase_eastm.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/LibraryBookcase/Jecrell_Bookcase_southm.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/LibraryBookcase/Jecrell_Bookcase_northm.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/ShortScrollcase/Jecrell_ShortScrollcaseSparse_southm.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Furniture/jecrellStoneShelf_south
+  - Copy.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/PaperTableElectric/jecrellTablePaperElectric_north.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/LibraryScrollcase/Jecrell_ScrollcaseEmpty_eastm.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/LibraryBookcase/Jecrell_BookcaseSparse_eastm.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/ShortBookcase/Jecrell_ShortBookcaseEmpty_northm.png
+- Assets/Data/Mlie.RimWriter/Textures/Item/Resource/Journal/Jecrell_Book_m - Copy.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/ShortBookcase/Jecrell_ShortBookcase_south.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/ShortBookcase/Jecrell_ShortBookcaseEmpty_north.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/PaperTable/jecrellTablePaper_northm.png
+- Assets/Data/Mlie.RimWriter/Textures/Item/Resource/Journal/Jecrell_Journal.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/LibraryBookcase/Jecrell_BookcaseSparse_northm.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/ShortScrollcase/Jecrell_ShortScrollcaseSparse_south.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/ShortBookcase/Jecrell_ShortBookcaseSparse_south.png
+- Assets/Data/Mlie.RimWriter/Textures/Item/Unfinished/Jecrell_Page.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/ShortScrollcase/Jecrell_ShortScrollcase_south.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/ShortScrollcase/Jecrell_ShortScrollcase_east.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/LibraryBookcase/Jecrell_BookcaseEmpty_northm.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/LibraryScrollcase/Jecrell_ScrollcaseSparse_southm.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/LibraryBookcase/Jecrell_Bookcase_south.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/LibraryBookcase/Jecrell_BookcaseEmpty_north.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/ShortScrollcase/Jecrell_ShortScrollcaseSparse_east.png
+- Assets/Data/Mlie.RimWriter/Textures/UI/Commands/jecrellDestroyWriting.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/LibraryBookcase/Jecrell_BookcaseSparse_south.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/LibraryScrollcase/Jecrell_ScrollcaseEmpty_north.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/LibraryBookcase/Jecrell_BookcaseEmpty_east.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/LibraryScrollcase/Jecrell_ScrollcaseEmpty_south.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/ShortScrollcase/Jecrell_ShortScrollcaseEmpty_east.png
+- Assets/Data/Mlie.RimWriter/Textures/Item/Resource/Journal/Jecrell_xJournal.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/LibraryScrollcase/Jecrell_ScrollcaseEmpty_southm.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/LibraryBookcase/Jecrell_BookcaseSparse_east.png
+- Assets/Data/Mlie.RimWriter/Textures/UI/Icons/ThingCategories/jecrellBook.png
+- Assets/Data/Mlie.RimWriter/Textures/Item/Resource/Journal/Jecrell_JournalBook.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/ShortBookcase/Jecrell_ShortBookcaseEmpty_eastm.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/LibraryScrollcase/Jecrell_Scrollcase_south.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/ShortScrollcase/Jecrell_ShortScrollcaseSparse_eastm.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/ShortScrollcase/Jecrell_ShortScrollcase_eastm.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Furniture/jecrellStoneShelf_east.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/ShortScrollcase/Jecrell_ShortScrollcaseEmpty_northm.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/LibraryBookcase/Jecrell_BookcaseSparse_north.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/WritersTable/Jecrell_WritersTable_southm.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/LibraryScrollcase/Jecrell_ScrollcaseSparse_northm.png
+- Assets/Data/Mlie.RimWriter/Textures/Item/Resource/Journal/Jecrell_Tablet_Unfinished.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/ShortScrollcase/Jecrell_ShortScrollcaseSparse_northm.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/TypewriterTable/Jecrell_TypewriterTable_south.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/ShortBookcase/Jecrell_ShortBookcase_east.png
+- Assets/Data/Mlie.RimWriter/Textures/Item/Resource/Journal/Jecrell_Book.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/PaperTableElectric/jecrellTablePaperElectric_south.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/ShortBookcase/Jecrell_ShortBookcaseSparse_southm.png
+- Assets/Data/Mlie.RimWriter/Sounds/Typewriter/ManualTyping.ogg
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/ShortScrollcase/Jecrell_ShortScrollcase_northm.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/ShortBookcase/Jecrell_ShortBookcase_southm.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/ShortScrollcase/Jecrell_ShortScrollcaseEmpty_eastm.png
+- Assets/Data/Mlie.RimWriter/Textures/Item/Unfinished/Jecrell_Scroll.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/TypewriterTable/Jecrell_TypewriterTable_eastm.png
+- Assets/Data/Mlie.RimWriter/Textures/UI/Icons/ThingCategories/jecrellTablet.png
+- Assets/Data/Mlie.RimWriter/Textures/UI/Icons/ThingCategories/jecrellScroll.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/ShortBookcase/Jecrell_ShortBookcaseSparse_eastm.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/TypewriterTable/Jecrell_TypewriterTable_southm.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/PaperTableElectric/jecrellTablePaperElectric_northm.png
+- Assets/Data/Mlie.RimWriter/Textures/Building/Production/ShortScrollcase/Jecrell_ShortScrollcaseEmpty_southm.png
+Dependencies: []

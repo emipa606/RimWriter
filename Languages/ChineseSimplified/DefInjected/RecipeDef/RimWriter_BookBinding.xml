@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <RimWriter_MakeJournalAtTypewriter.label>用打字机写日志</RimWriter_MakeJournalAtTypewriter.label>
   <RimWriter_MakeJournalAtTypewriter.description>用打字机压平的纸张或羊皮纸之类的书写用纸，然后把它们装订在一起，这样就能写日志了。\n日志通常是对事件或研究的具体描述，而不像通常的写书具有虚构元素。</RimWriter_MakeJournalAtTypewriter.description>

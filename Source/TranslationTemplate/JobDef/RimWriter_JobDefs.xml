@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: writing automatically. -->
+  <RimWriter_AutoWrite.reportString>writing automatically.</RimWriter_AutoWrite.reportString>
+  <!-- EN: practice writing. -->
+  <RimWriter_FreeWrite.reportString>practice writing.</RimWriter_FreeWrite.reportString>
+  <!-- EN: reading. -->
+  <RimWriter_ReadABook.reportString>reading.</RimWriter_ReadABook.reportString>
+  <!-- EN: returning TargetA. -->
+  <RimWriter_ReturnBook.reportString>returning TargetA.</RimWriter_ReturnBook.reportString>
+</LanguageData>

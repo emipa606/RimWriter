@@ -10,12 +10,7 @@ public class CompStorageGraphic : ThingComp
     {
         get
         {
-            if (cachedGraphic != null)
-            {
-                return cachedGraphic;
-            }
-
-            if (parent.TryGetInnerInteractableThingOwner() is not { Count: var count })
+            if (cachedGraphic != null || parent.TryGetInnerInteractableThingOwner() is not { Count: var count })
             {
                 return cachedGraphic;
             }

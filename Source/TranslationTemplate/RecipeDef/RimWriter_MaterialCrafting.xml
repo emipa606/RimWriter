@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: make 100 cloth paper at papermaking bench -->
+  <RimWriter_MakeClothPaper.label>make 100 cloth paper at papermaking bench</RimWriter_MakeClothPaper.label>
+  <!-- EN: Makes around one hundred cloth papers from various types of fabric. -->
+  <RimWriter_MakeClothPaper.description>Makes around one hundred cloth papers from various types of fabric.</RimWriter_MakeClothPaper.description>
+  <!-- EN: Making cloth paper. -->
+  <RimWriter_MakeClothPaper.jobString>Making cloth paper.</RimWriter_MakeClothPaper.jobString>
+  <!-- EN: make 100 cloth paper at papermaking bench -->
+  <RimWriter_MakeClothPaperFast.label>make 100 cloth paper at papermaking bench</RimWriter_MakeClothPaperFast.label>
+  <!-- EN: Makes around one hundred cloth papers from various types of fabric. -->
+  <RimWriter_MakeClothPaperFast.description>Makes around one hundred cloth papers from various types of fabric.</RimWriter_MakeClothPaperFast.description>
+  <!-- EN: Making cloth paper. -->
+  <RimWriter_MakeClothPaperFast.jobString>Making cloth paper.</RimWriter_MakeClothPaperFast.jobString>
+  <!-- EN: make 100 pages at papermaking bench -->
+  <RimWriter_MakePage.label>make 100 pages at papermaking bench</RimWriter_MakePage.label>
+  <!-- EN: Makes around one hundred pages from a few logs of wood. -->
+  <RimWriter_MakePage.description>Makes around one hundred pages from a few logs of wood.</RimWriter_MakePage.description>
+  <!-- EN: Making pages. -->
+  <RimWriter_MakePage.jobString>Making pages.</RimWriter_MakePage.jobString>
+  <!-- EN: make 100 pages at papermaking bench -->
+  <RimWriter_MakePageFast.label>make 100 pages at papermaking bench</RimWriter_MakePageFast.label>
+  <!-- EN: Makes around one hundred pages from a few logs of wood. -->
+  <RimWriter_MakePageFast.description>Makes around one hundred pages from a few logs of wood.</RimWriter_MakePageFast.description>
+  <!-- EN: Making pages. -->
+  <RimWriter_MakePageFast.jobString>Making pages.</RimWriter_MakePageFast.jobString>
+  <!-- EN: make 100 parchment at papermaking bench -->
+  <RimWriter_MakeParchment.label>make 100 parchment at papermaking bench</RimWriter_MakeParchment.label>
+  <!-- EN: Makes around one hundred parchments from leather. -->
+  <RimWriter_MakeParchment.description>Makes around one hundred parchments from leather.</RimWriter_MakeParchment.description>
+  <!-- EN: Making parchment. -->
+  <RimWriter_MakeParchment.jobString>Making parchment.</RimWriter_MakeParchment.jobString>
+  <!-- EN: make 100 parchment at papermaking bench -->
+  <RimWriter_MakeParchmentFast.label>make 100 parchment at papermaking bench</RimWriter_MakeParchmentFast.label>
+  <!-- EN: Makes around one hundred parchments from leather. -->
+  <RimWriter_MakeParchmentFast.description>Makes around one hundred parchments from leather.</RimWriter_MakeParchmentFast.description>
+  <!-- EN: Making parchment. -->
+  <RimWriter_MakeParchmentFast.jobString>Making parchment.</RimWriter_MakeParchmentFast.jobString>
+</LanguageData>

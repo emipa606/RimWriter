@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: cloth paper -->
+  <Jecrell_ClothPaper.label>cloth paper</Jecrell_ClothPaper.label>
+  <!-- EN: A long lasting material made from fabric used for book making, sometimes also referred to as fabric paper or rag paper. -->
+  <Jecrell_ClothPaper.description>A long lasting material made from fabric used for book making, sometimes also referred to as fabric paper or rag paper.</Jecrell_ClothPaper.description>
+  <!-- EN: paper -->
+  <Jecrell_Paper.label>paper</Jecrell_Paper.label>
+  <!-- EN: A material made from wood used for book making. -->
+  <Jecrell_Paper.description>A material made from wood used for book making.</Jecrell_Paper.description>
+  <!-- EN: parchment -->
+  <Jecrell_Parchment.label>parchment</Jecrell_Parchment.label>
+  <!-- EN: A long lasting material made from hides or skin used for book making. -->
+  <Jecrell_Parchment.description>A long lasting material made from hides or skin used for book making.</Jecrell_Parchment.description>
+</LanguageData>

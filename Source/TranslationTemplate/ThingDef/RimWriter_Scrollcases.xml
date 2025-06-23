@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Scrollcase (tall) -->
+  <Jecrell_Scrollcase.label>Scrollcase (tall)</Jecrell_Scrollcase.label>
+  <!-- EN: Used to hold and catalog scrolls. -->
+  <Jecrell_Scrollcase.description>Used to hold and catalog scrolls.</Jecrell_Scrollcase.description>
+  <!-- EN: Scrollcase (short) -->
+  <Jecrell_ScrollcaseShort.label>Scrollcase (short)</Jecrell_ScrollcaseShort.label>
+  <!-- EN: Used to hold and catalog scrolls. -->
+  <Jecrell_ScrollcaseShort.description>Used to hold and catalog scrolls.</Jecrell_ScrollcaseShort.description>
+</LanguageData>

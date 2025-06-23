@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: bookcase (tall) -->
+  <Jecrell_Bookcase.label>bookcase (tall)</Jecrell_Bookcase.label>
+  <!-- EN: Used to hold and catalog books. -->
+  <Jecrell_Bookcase.description>Used to hold and catalog books.</Jecrell_Bookcase.description>
+  <!-- EN: bookcase (short) -->
+  <Jecrell_BookcaseShort.label>bookcase (short)</Jecrell_BookcaseShort.label>
+  <!-- EN: Used to hold and catalog books. -->
+  <Jecrell_BookcaseShort.description>Used to hold and catalog books.</Jecrell_BookcaseShort.description>
+</LanguageData>

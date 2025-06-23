@@ -10,27 +10,6 @@ using RimWorld;
 using Verse;
 using Verse.AI;
 
-// ----------------------------------------------------------------------
-
-// These are RimWorld-specific usings. Activate/Deactivate what you need:
-
-// ----------------------------------------------------------------------
-
-// Always needed
-
-// using VerseBase;         // Material/Graphics handling functions are found here
-
-// RimWorld universal objects are here (like 'Building')
-
-// Needed when you do something with the AI
-
-// Needed when you do something with Sound
-
-// Needed when you do something with Noises
-
-// RimWorld specific functions are found here (like 'Building_Battery')
-// RimWorld specific functions for world creation
-// using RimWorld.SquadAI;  // RimWorld specific functions for squad brains 
 namespace RimWriter;
 
 /// <summary>
@@ -43,7 +22,7 @@ namespace RimWriter;
 /// <permission>Free to use by all.</permission>
 public class Building_Typewriter : Building_WorkTable
 {
-    private readonly float sanityRestoreRate = 0.000025f;
+    private const float SanityRestoreRate = 0.000025f;
 
     // ===================== Variables =====================
 
@@ -180,7 +159,7 @@ public class Building_Typewriter : Building_WorkTable
     ///     This is used, when the Ticker in the XML is set to 'Normal'
     ///     This Tick is done often (60 times per second)
     /// </summary>
-    public override void Tick()
+    protected override void Tick()
     {
         if (destroyedFlag)
         {
@@ -191,7 +170,7 @@ public class Building_Typewriter : Building_WorkTable
         base.Tick();
 
         // Call work function
-        DoTickerWork();
+        doTickerWork();
     }
 
     // ===================== Ticker =====================
@@ -212,7 +191,7 @@ public class Building_Typewriter : Building_WorkTable
         base.TickRare();
 
         // Call work function
-        DoTickerWork();
+        doTickerWork();
     }
 
     public override void UsedThisTick()
@@ -235,7 +214,7 @@ public class Building_Typewriter : Building_WorkTable
                 return;
             }
 
-            RimWriterUtility.ReduceSanityLoss(pawn, sanityRestoreRate);
+            RimWriterUtility.ReduceSanityLoss(pawn, SanityRestoreRate);
             if (Find.TickManager.TicksGame % 1500 == 0)
             {
                 Messages.Message($"{pawn} has restored some sanity using the {def.label}.",
@@ -253,7 +232,7 @@ public class Building_Typewriter : Building_WorkTable
     /// <summary>
     ///     This will be called from one of the Ticker-Functions.
     /// </summary>
-    private void DoTickerWork()
+    private static void doTickerWork()
     {
     }
 }

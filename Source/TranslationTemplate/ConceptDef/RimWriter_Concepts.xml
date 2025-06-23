@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Writing -->
+  <Jecrell_TypewriterTable.label>Writing</Jecrell_TypewriterTable.label>
+  <!-- EN: Pawns can use the typewriting table to give themselves joy and reduce stress. If Call of Cthulhu is enabled, this station will also reduce the severity of insanity at a faster rate. Pawns can also create journal items. Currently, these are rudimentary, and can be destroyed. They will be expanded upon later. -->
+  <Jecrell_TypewriterTable.helpText>Pawns can use the typewriting table to give themselves joy and reduce stress. If Call of Cthulhu is enabled, this station will also reduce the severity of insanity at a faster rate. Pawns can also create journal items. Currently, these are rudimentary, and can be destroyed. They will be expanded upon later.</Jecrell_TypewriterTable.helpText>
+  <!-- EN: book burning -->
+  <RimWriter_BookBurning.label>book burning</RimWriter_BookBurning.label>
+  <!-- EN: Books and scrolls can make your colonists entertained, but can also lead to harmful ideas and attempts to overthrow the bourgeoisie.\n\nIf you want to keep down the proletariat in your colony, or if you enjoy reenacting Fahrenheit 451, you have the option of burning these books at a campfire or electric crematorium.  -->
+  <RimWriter_BookBurning.helpText>Books and scrolls can make your colonists entertained, but can also lead to harmful ideas and attempts to overthrow the bourgeoisie.
+
+If you want to keep down the proletariat in your colony, or if you enjoy reenacting Fahrenheit 451, you have the option of burning these books at a campfire or electric crematorium. </RimWriter_BookBurning.helpText>
+  <!-- EN: paper making -->
+  <RimWriter_PaperMaking.label>paper making</RimWriter_PaperMaking.label>
+  <!-- EN: Paper and parchment can be created at the paper making table. Paper is crafted from logs, and parchment is crafted from leather. Both can be used as materials to make books. -->
+  <RimWriter_PaperMaking.helpText>Paper and parchment can be created at the paper making table. Paper is crafted from logs, and parchment is crafted from leather. Both can be used as materials to make books.</RimWriter_PaperMaking.helpText>
+</LanguageData>

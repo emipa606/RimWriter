@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: make -->
+  <DoBillsPapermaking.label>make</DoBillsPapermaking.label>
+  <!-- EN: making at -->
+  <DoBillsPapermaking.gerund>making at</DoBillsPapermaking.gerund>
+  <!-- EN: make -->
+  <DoBillsPapermaking.verb>make</DoBillsPapermaking.verb>
+  <!-- EN: write -->
+  <DoBillsWrite.label>write</DoBillsWrite.label>
+  <!-- EN: writing at -->
+  <DoBillsWrite.gerund>writing at</DoBillsWrite.gerund>
+  <!-- EN: write -->
+  <DoBillsWrite.verb>write</DoBillsWrite.verb>
+  <!-- EN: return books -->
+  <RimWriter_ReturnBooks.label>return books</RimWriter_ReturnBooks.label>
+  <!-- EN: returning -->
+  <RimWriter_ReturnBooks.gerund>returning</RimWriter_ReturnBooks.gerund>
+  <!-- EN: return -->
+  <RimWriter_ReturnBooks.verb>return</RimWriter_ReturnBooks.verb>
+</LanguageData>

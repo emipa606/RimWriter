@@ -9,19 +9,15 @@ namespace RimWriter;
 
 public class ITab_Inventory : ITab
 {
-    private const float StandardLineHeight = 22f;
-
     private const float ThingIconSize = 28f;
 
     private const float ThingLeftX = 36f;
 
-    private const float ThingRowHeight = 28f;
-
     private const float TopPadding = 20f;
 
-    private static readonly Color HighlightColor = new Color(0.5f, 0.5f, 0.5f, 1f);
+    private static readonly Color highlightColor = new(0.5f, 0.5f, 0.5f, 1f);
 
-    private static readonly Color ThingLabelColor = new Color(0.9f, 0.9f, 0.9f, 1f);
+    private static readonly Color thingLabelColor = new(0.9f, 0.9f, 0.9f, 1f);
 
     private static readonly List<Thing> workingInvList = [];
 
@@ -29,22 +25,6 @@ public class ITab_Inventory : ITab
 
     private float scrollViewHeight;
 
-    // private Pawn SelPawnForGear
-    // {
-    // get
-    // {
-    // if (base.SelPawn != null)
-    // {
-    // return base.SelPawn;
-    // }
-    // Corpse = base.SelThing as Corpse;
-    // if (corpse != null)
-    // {
-    // return corpse.InnerPawn;
-    // }
-    // throw new InvalidOperationException("Gear tab on non-pawn non-corpse " + base.SelThing);
-    // }
-    // }
     public ITab_Inventory()
     {
         size = new Vector2(460f, 450f);
@@ -71,7 +51,7 @@ public class ITab_Inventory : ITab
     protected override void FillTab()
     {
         Text.Font = GameFont.Small;
-        var rect = new Rect(0f, 20f, size.x, size.y - 20f);
+        var rect = new Rect(0f, TopPadding, size.x, size.y - TopPadding);
         var rect2 = rect.ContractedBy(10f);
         var position = new Rect(rect2.x, rect2.y, rect2.width, rect2.height);
         GUI.BeginGroup(position);
@@ -82,34 +62,6 @@ public class ITab_Inventory : ITab
         Widgets.BeginScrollView(outRect, ref scrollPosition, viewRect);
         var num = 0f;
 
-        // this.TryDrawMassInfo(ref num, viewRect.width);
-        // this.TryDrawComfyTemperatureRange(ref num, viewRect.width);
-        // if (this.SelPawnForGear.apparel != null)
-        // {
-        // bool flag = false;
-        // this.TryDrawAverageArmor(ref num, viewRect.width, StatDefOf.ArmorRating_Blunt, "ArmorBlunt".Translate(), ref flag);
-        // this.TryDrawAverageArmor(ref num, viewRect.width, StatDefOf.ArmorRating_Sharp, "ArmorSharp".Translate(), ref flag);
-        // this.TryDrawAverageArmor(ref num, viewRect.width, StatDefOf.ArmorRating_Heat, "ArmorHeat".Translate(), ref flag);
-        // this.TryDrawAverageArmor(ref num, viewRect.width, StatDefOf.ArmorRating_Electric, "ArmorElectric".Translate(), ref flag);
-        // }
-        // if (this.SelPawnForGear.equipment != null)
-        // {
-        // Widgets.ListSeparator(ref num, viewRect.width, "Equipment".Translate());
-        // foreach (ThingWithComps current in this.SelPawnForGear.equipment.AllEquipmentListForReading)
-        // {
-        // this.DrawThingRow(ref num, viewRect.width, current, false);
-        // }
-        // }
-        // if (this.SelPawnForGear.apparel != null)
-        // {
-        // Widgets.ListSeparator(ref num, viewRect.width, "Apparel".Translate());
-        // foreach (Apparel current2 in from ap in this.SelPawnForGear.apparel.WornApparel
-        // orderby ap.def.apparel.bodyPartGroups[0].listOrder descending
-        // select ap)
-        // {
-        // this.DrawThingRow(ref num, viewRect.width, current2, false);
-        // }
-        // }
         if (SelStorage.TryGetInnerInteractableThingOwner() is { } t)
         {
             Widgets.ListSeparator(ref num, viewRect.width, "Inventory".Translate());
@@ -134,7 +86,7 @@ public class ITab_Inventory : ITab
 
     private void DrawThingRow(ref float y, float width, Thing thing)
     {
-        var rect = new Rect(0f, y, width, 28f);
+        var rect = new Rect(0f, y, width, ThingIconSize);
         Widgets.InfoCardButton(rect.width - 24f, y, thing);
         rect.width -= 24f;
         if (CanControl)
@@ -144,7 +96,7 @@ public class ITab_Inventory : ITab
             if (Widgets.ButtonImage(rect2, ITabButton.Drop))
             {
                 SoundDefOf.Tick_High.PlayOneShotOnCamera();
-                InterfaceDrop(thing);
+                interfaceDrop(thing);
             }
 
             rect.width -= 24f;
@@ -157,18 +109,18 @@ public class ITab_Inventory : ITab
         rect.width -= 60f;
         if (Mouse.IsOver(rect))
         {
-            GUI.color = HighlightColor;
+            GUI.color = highlightColor;
             GUI.DrawTexture(rect, TexUI.HighlightTex);
         }
 
         if (thing.def.DrawMatSingle != null && thing.def.DrawMatSingle.mainTexture != null)
         {
-            Widgets.ThingIcon(new Rect(4f, y, 28f, 28f), thing);
+            Widgets.ThingIcon(new Rect(4f, y, ThingIconSize, ThingIconSize), thing);
         }
 
         Text.Anchor = TextAnchor.MiddleLeft;
-        GUI.color = ThingLabelColor;
-        var rect5 = new Rect(36f, y, rect.width - 36f, rect.height);
+        GUI.color = thingLabelColor;
+        var rect5 = new Rect(ThingLeftX, y, rect.width - ThingLeftX, rect.height);
         var text = thing.LabelCap;
         Text.WordWrap = false;
         Widgets.Label(rect5, text.Truncate(rect5.width));
@@ -181,26 +133,10 @@ public class ITab_Inventory : ITab
         }
 
         TooltipHandler.TipRegion(rect, text2);
-        y += 28f;
+        y += ThingIconSize;
     }
 
-    // private void TryDrawMassInfo(ref float curY, float width)
-    // {
-    // if (!this.selStorage.Spawned)
-    // {
-    // return;
-    // }
-    // Rect rect = new Rect(0f, curY, width, 22f);
-    // float num = MassUtility.GearAndInventoryMass(this.selStorage);
-    // float num2 = MassUtility.Capacity(this.SelPawnForGear);
-    // Widgets.Label(rect, "MassCarried".Translate(new object[]
-    // {
-    // num.ToString("0.##"),
-    // num2.ToString("0.##")
-    // }));
-    // curY += 22f;
-    // }
-    private void InterfaceDrop(Thing t)
+    private void interfaceDrop(Thing t)
     {
         SelStorage.TryDrop(t);
     }

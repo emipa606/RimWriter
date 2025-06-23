@@ -7,23 +7,20 @@ namespace RimWriter;
 public class Building_InternalStorage : Building, IThingHolder, IStoreSettingsParent
 {
     private CompStorageGraphic compStorageGraphic;
-    protected ThingOwner innerContainer;
+    protected ThingOwner InnerContainer;
 
     private StorageSettings storageSettings;
 
-    public Building_InternalStorage()
+    protected Building_InternalStorage()
     {
-        innerContainer = new ThingOwner<Thing>(this, false);
+        InnerContainer = new ThingOwner<Thing>(this, false);
     }
 
     public CompStorageGraphic CompStorageGraphic
     {
         get
         {
-            if (compStorageGraphic == null)
-            {
-                compStorageGraphic = this.TryGetComp<CompStorageGraphic>();
-            }
+            compStorageGraphic ??= this.TryGetComp<CompStorageGraphic>();
 
             return compStorageGraphic;
         }
@@ -54,7 +51,7 @@ public class Building_InternalStorage : Building, IThingHolder, IStoreSettingsPa
 
     public ThingOwner GetDirectlyHeldThings()
     {
-        return innerContainer;
+        return InnerContainer;
     }
 
     public bool Accepts(Thing thing)
@@ -64,13 +61,13 @@ public class Building_InternalStorage : Building, IThingHolder, IStoreSettingsPa
             return false;
         }
 
-        return innerContainer.Count + 1 <= CompStorageGraphic.Props.countFullCapacity;
+        return InnerContainer.Count + 1 <= CompStorageGraphic.Props.countFullCapacity;
     }
 
     public override void ExposeData()
     {
         base.ExposeData();
-        Scribe_Deep.Look(ref innerContainer, "innerContainer", this);
+        Scribe_Deep.Look(ref InnerContainer, "innerContainer", this);
         Scribe_Deep.Look(ref storageSettings, "storageSettings", this);
     }
 
@@ -84,19 +81,14 @@ public class Building_InternalStorage : Building, IThingHolder, IStoreSettingsPa
         }
     }
 
-    public bool TryAccept(Thing thing)
-    {
-        return true;
-    }
-
     public void TryDrop(Thing item, bool forbid = true)
     {
-        if (!innerContainer.Contains(item))
+        if (!InnerContainer.Contains(item))
         {
             return;
         }
 
-        innerContainer.TryDrop(item, ThingPlaceMode.Near, out var outThing);
+        InnerContainer.TryDrop(item, ThingPlaceMode.Near, out var outThing);
         if (forbid)
         {
             outThing.SetForbidden(true);
@@ -106,9 +98,9 @@ public class Building_InternalStorage : Building, IThingHolder, IStoreSettingsPa
     public bool TryDropRandom(out Thing droppedThing, bool forbid = false)
     {
         droppedThing = null;
-        if (innerContainer.Count > 0)
+        if (InnerContainer.Count > 0)
         {
-            innerContainer.TryDrop(innerContainer.RandomElement(), ThingPlaceMode.Near, out var outThing);
+            InnerContainer.TryDrop(InnerContainer.RandomElement(), ThingPlaceMode.Near, out var outThing);
             if (forbid)
             {
                 outThing.SetForbidden(true);

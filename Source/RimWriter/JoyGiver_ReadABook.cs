@@ -13,11 +13,11 @@ public class JoyGiver_ReadABook : JoyGiver
         var source = pawn.Map.listerThings.AllThings.FindAll(y => y is Building_Bookcase).Where(
             delegate(Thing x)
             {
-                var building_bookcase = (Building_Bookcase)x;
+                var buildingBookcase = (Building_Bookcase)x;
                 return x.TryGetInnerInteractableThingOwner()?.Count > 0 && x.Faction == Faction.OfPlayer &&
-                       !building_bookcase.IsForbidden(pawn) &&
+                       !buildingBookcase.IsForbidden(pawn) &&
                        pawn.CanReserveAndReach(x, PathEndMode.Touch, Danger.None) &&
-                       building_bookcase.IsPoliticallyProper(pawn);
+                       buildingBookcase.IsPoliticallyProper(pawn);
             });
         if (!source.TryRandomElementByWeight(
                 delegate(Thing x)

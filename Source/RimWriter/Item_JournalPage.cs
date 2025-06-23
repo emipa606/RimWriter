@@ -10,7 +10,7 @@ public class Item_JournalPage : ThingWithComps
 {
     private CompArt artComp;
 
-    private bool IsBook;
+    private bool isBook;
 
     private Pawn owner;
 
@@ -29,7 +29,7 @@ public class Item_JournalPage : ThingWithComps
         base.ExposeData();
 
         // Save and load the work variables, so they don't default after loading
-        Scribe_Values.Look(ref IsBook, "IsBook");
+        Scribe_Values.Look(ref isBook, "IsBook");
         Scribe_Values.Look(ref saveOwner, "saveOwner");
         if (saveOwner)
         {
@@ -57,7 +57,7 @@ public class Item_JournalPage : ThingWithComps
         };
     }
 
-    public void ResolveOwner()
+    private void resolveOwner()
     {
         if (artComp == null)
         {
@@ -81,6 +81,6 @@ public class Item_JournalPage : ThingWithComps
     {
         base.SpawnSetup(map, bla);
         artComp = GetComp<CompArt>();
-        ResolveOwner();
+        resolveOwner();
     }
 }

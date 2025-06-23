@@ -13,7 +13,7 @@ public class WorkGiver_ReturnBooks : WorkGiver_Scanner
     public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
     {
         var book = t as ThingBook;
-        if (!MeetsExceptionList(t) && book == null)
+        if (!meetsExceptionList(t) && book == null)
         {
             return null;
         }
@@ -23,12 +23,12 @@ public class WorkGiver_ReturnBooks : WorkGiver_Scanner
             return null;
         }
 
-        var Building_InternalStorage = FindBestStorage(pawn, t);
-        if (Building_InternalStorage != null)
+        var buildingInternalStorage = findBestStorage(pawn, t);
+        if (buildingInternalStorage != null)
         {
             if (book != null)
             {
-                return new Job(DefDatabase<JobDef>.GetNamed("RimWriter_ReturnBook"), t, Building_InternalStorage)
+                return new Job(DefDatabase<JobDef>.GetNamed("RimWriter_ReturnBook"), t, buildingInternalStorage)
                     { count = book.stackCount };
             }
         }
@@ -42,9 +42,9 @@ public class WorkGiver_ReturnBooks : WorkGiver_Scanner
         return Danger.Deadly;
     }
 
-    public bool MeetsExceptionList(Thing t)
+    private static bool meetsExceptionList(Thing t)
     {
-        return t?.def?.defName == "Cults_Grimoire" || t?.def?.defName == "Cults_TheKingInYellow";
+        return t?.def?.defName is "Cults_Grimoire" or "Cults_TheKingInYellow";
     }
 
     public override IEnumerable<Thing> PotentialWorkThingsGlobal(Pawn pawn)
@@ -57,7 +57,7 @@ public class WorkGiver_ReturnBooks : WorkGiver_Scanner
         return !pawn.Map.listerThings.AllThings.Any(x => x is ThingBook);
     }
 
-    private Building_InternalStorage FindBestStorage(Pawn p, Thing book)
+    private static Building_InternalStorage findBestStorage(Pawn p, Thing book)
     {
         var position = book.Position;
         var map = book.Map;
@@ -73,7 +73,7 @@ public class WorkGiver_ReturnBooks : WorkGiver_Scanner
             return !m.IsForbidden(p) && p.CanReserveNew(m) && ((Building_InternalStorage)m).Accepts(book);
         }
 
-        float priorityGetter(Thing t)
+        static float priorityGetter(Thing t)
         {
             var result = 0f;
             result += (float)((IStoreSettingsParent)t).GetStoreSettings().Priority;

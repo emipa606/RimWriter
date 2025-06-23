@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: bookshelves -->
+  <RimWriter_TechBookshelves.label>bookshelves</RimWriter_TechBookshelves.label>
+  <!-- EN: Allows your colony to construct shelves for scrolls, journals, and books. -->
+  <RimWriter_TechBookshelves.description>Allows your colony to construct shelves for scrolls, journals, and books.</RimWriter_TechBookshelves.description>
+  <!-- EN: pages and bookbinding -->
+  <RimWriter_TechHandWriting.label>pages and bookbinding</RimWriter_TechHandWriting.label>
+  <!-- EN: Allows your colony to create pages at paper tables and write handwritten pages and simple books at a writer's table or crafting spot. -->
+  <RimWriter_TechHandWriting.description>Allows your colony to create pages at paper tables and write handwritten pages and simple books at a writer's table or crafting spot.</RimWriter_TechHandWriting.description>
+  <!-- EN: earth writing -->
+  <RimWriter_TechPrimitiveWriting.label>earth writing</RimWriter_TechPrimitiveWriting.label>
+  <!-- EN: Allows your colony to chisel out stony shelves and create tablets at crafting spots that retain stories of your colony. Parting the red sea is not included. -->
+  <RimWriter_TechPrimitiveWriting.description>Allows your colony to chisel out stony shelves and create tablets at crafting spots that retain stories of your colony. Parting the red sea is not included.</RimWriter_TechPrimitiveWriting.description>
+  <!-- EN: leather scribing -->
+  <RimWriter_TechSimpleWriting.label>leather scribing</RimWriter_TechSimpleWriting.label>
+  <!-- EN: Allows your colony to scribe texts on leather scrolls at crafting spots that retain stories of your colony. -->
+  <RimWriter_TechSimpleWriting.description>Allows your colony to scribe texts on leather scrolls at crafting spots that retain stories of your colony.</RimWriter_TechSimpleWriting.description>
+  <!-- EN: typewriting -->
+  <RimWriter_TechTypewriting.label>typewriting</RimWriter_TechTypewriting.label>
+  <!-- EN: Allows you to construct a writing table with a mechanical typewriter to provide a joyful creative outlet for your colonists. -->
+  <RimWriter_TechTypewriting.description>Allows you to construct a writing table with a mechanical typewriter to provide a joyful creative outlet for your colonists.</RimWriter_TechTypewriting.description>
+</LanguageData>

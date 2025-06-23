@@ -1,4 +1,4 @@
-# RimWriter
+# [RimWriter - Books, Scrolls, Tablets, and Libraries (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=2251045831)
 
 ![Image](https://i.imgur.com/buuPQel.png)
 
@@ -8,13 +8,11 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1521844535
 - This is an unofficial port
 - This will be removed when/if Jecrell comes back
 - Added chinese translation based on the mod by leafzxg
-- Also checkout the https://steamcommunity.com/sharedfiles/filedetails/?id=2859447345]RimWriter Addon by greensniperhat
+- Also checkout the [RimWriter Addon](https://steamcommunity.com/sharedfiles/filedetails/?id=2859447345) by greensniperhat
 
 ![Image](https://i.imgur.com/pufA0kM.png)
-
 	
 ![Image](https://i.imgur.com/Z4GOv8H.png)
-
 
 Add tablets, books, scrolls, libraries, and more to your RimWorld playthroughs.
 
@@ -62,13 +60,12 @@ No.
 
 -  See if the the error persists if you just have this mod and its requirements active.
 -  If not, try adding your other mods until it happens again.
--  Post your error-log using https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib or the standalone https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404]Uploader and command Ctrl+F12
+-  Post your error-log using [HugsLib](https://steamcommunity.com/workshop/filedetails/?id=818773962) or the standalone [Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404) and command Ctrl+F12
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
--  Use https://github.com/RimSort/RimSort/releases/latest]RimSort to sort your mods
+-  Use [RimSort](https://github.com/RimSort/RimSort/releases/latest) to sort your mods
 
+ 
 
-
-https://steamcommunity.com/sharedfiles/filedetails/changelog/2251045831]![Image](https://img.shields.io/github/v/release/emipa606/RimWriter?label=latest%20version&style=plastic&color=9f1111&labelColor=black)
-
+[![Image](https://img.shields.io/github/v/release/emipa606/RimWriter?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/2251045831) | tags:  books,  research

@@ -6,9 +6,9 @@ namespace RimWriter;
 
 public class RimWriterUtility
 {
-    public const string AltSanityLossDef = "Cults_SanityLoss";
+    private const string AltSanityLossDef = "Cults_SanityLoss";
 
-    public const string SanityLossDef = "ROM_SanityLoss";
+    private const string SanityLossDef = "ROM_SanityLoss";
 
     private static bool loadedCosmicHorrors;
 
@@ -16,7 +16,7 @@ public class RimWriterUtility
 
     private static bool modCheck;
 
-    public static string Prefix => $"{ModProps.main} :: {ModProps.mod} :: ";
+    private static string Prefix => $"{ModProps.Main} :: {ModProps.Mod} :: ";
 
     /// <summary>
     ///     This method handles the application of Sanity Loss in multiple mods.
@@ -62,7 +62,7 @@ public class RimWriterUtility
         }
     }
 
-    public static void DebugReport(string x)
+    private static void debugReport(string x)
     {
         if (Prefs.DevMode && DebugSettings.godMode)
         {
@@ -99,29 +99,29 @@ public class RimWriterUtility
         return loadedCults;
     }
 
-    public static void ModCheck()
+    private static void ModCheck()
     {
         loadedCosmicHorrors = false;
         loadedCults = false;
-        foreach (var ResolvedMod in LoadedModManager.RunningMods)
+        foreach (var resolvedMod in LoadedModManager.RunningMods)
         {
             if (loadedCosmicHorrors && loadedCults)
             {
                 break; // Save some loading
             }
 
-            if (ResolvedMod.Name.Contains("Call of Cthulhu - Cosmic Horrors"))
+            if (resolvedMod.Name.Contains("Call of Cthulhu - Cosmic Horrors"))
             {
-                DebugReport("Loaded - Call of Cthulhu - Cosmic Horrors");
+                debugReport("Loaded - Call of Cthulhu - Cosmic Horrors");
                 loadedCosmicHorrors = true;
             }
 
-            if (!ResolvedMod.Name.Contains("Call of Cthulhu - Cults"))
+            if (!resolvedMod.Name.Contains("Call of Cthulhu - Cults"))
             {
                 continue;
             }
 
-            DebugReport("Loaded - Call of Cthulhu - Cults");
+            debugReport("Loaded - Call of Cthulhu - Cults");
             loadedCults = true;
         }
 

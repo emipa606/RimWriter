@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: burn books -->
+  <RimWriter_BurnBooks.label>burn books</RimWriter_BurnBooks.label>
+  <!-- EN: Burn unwanted books to completely destroy them without any mess. -->
+  <RimWriter_BurnBooks.description>Burn unwanted books to completely destroy them without any mess.</RimWriter_BurnBooks.description>
+  <!-- EN: Burning books. -->
+  <RimWriter_BurnBooks.jobString>Burning books.</RimWriter_BurnBooks.jobString>
+  <!-- EN: burn scrolls -->
+  <RimWriter_BurnScrolls.label>burn scrolls</RimWriter_BurnScrolls.label>
+  <!-- EN: Burn unwanted scrolls to completely destroy them without any mess. -->
+  <RimWriter_BurnScrolls.description>Burn unwanted scrolls to completely destroy them without any mess.</RimWriter_BurnScrolls.description>
+  <!-- EN: Burning scrolls. -->
+  <RimWriter_BurnScrolls.jobString>Burning scrolls.</RimWriter_BurnScrolls.jobString>
+</LanguageData>

@@ -13,12 +13,12 @@ public class JobDriver_ReturnBook : JobDriver
 
     public JobDriver_ReturnBook()
     {
-        rotateToFace = TargetIndex.B;
+        rotateToFace = GraveIndex;
     }
 
-    private ThingBook Book => (ThingBook)job.GetTarget(TargetIndex.A).Thing;
+    private ThingBook Book => (ThingBook)job.GetTarget(CorpseIndex).Thing;
 
-    private Building_InternalStorage Storage => (Building_InternalStorage)job.GetTarget(TargetIndex.B).Thing;
+    private Building_InternalStorage Storage => (Building_InternalStorage)job.GetTarget(GraveIndex).Thing;
 
     public override bool TryMakePreToilReservations(bool b)
     {
@@ -27,15 +27,15 @@ public class JobDriver_ReturnBook : JobDriver
 
     protected override IEnumerable<Toil> MakeNewToils()
     {
-        this.FailOnDestroyedNullOrForbidden(TargetIndex.A);
-        this.FailOnDestroyedNullOrForbidden(TargetIndex.B);
+        this.FailOnDestroyedNullOrForbidden(CorpseIndex);
+        this.FailOnDestroyedNullOrForbidden(GraveIndex);
         this.FailOn(() => !Storage.Accepts(Book));
-        yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.ClosestTouch)
-            .FailOnSomeonePhysicallyInteracting(TargetIndex.A);
-        yield return Toils_Haul.StartCarryThing(TargetIndex.A);
+        yield return Toils_Goto.GotoThing(CorpseIndex, PathEndMode.ClosestTouch)
+            .FailOnSomeonePhysicallyInteracting(CorpseIndex);
+        yield return Toils_Haul.StartCarryThing(CorpseIndex);
         yield return Toils_Haul.CarryHauledThingToContainer();
         var prepare = Toils_General.Wait(250);
-        prepare.WithProgressBarToilDelay(TargetIndex.B);
+        prepare.WithProgressBarToilDelay(GraveIndex);
         yield return prepare;
         yield return new Toil
         {

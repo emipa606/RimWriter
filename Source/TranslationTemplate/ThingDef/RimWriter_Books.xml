@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: book -->
+  <Jecrell_Book.label>book</Jecrell_Book.label>
+  <!-- EN: A collection of pages. -->
+  <Jecrell_Book.description>A collection of pages.</Jecrell_Book.description>
+  <!-- EN: skillbook -->
+  <Jecrell_Guidebook.label>skillbook</Jecrell_Guidebook.label>
+  <!-- EN: A skillbook used to help characters with their professions and skill improvement. -->
+  <Jecrell_Guidebook.description>A skillbook used to help characters with their professions and skill improvement.</Jecrell_Guidebook.description>
+</LanguageData>

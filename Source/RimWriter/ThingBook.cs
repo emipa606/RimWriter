@@ -27,10 +27,7 @@ public class ThingBook : ThingWithComps
     {
         get
         {
-            if (compArt == null)
-            {
-                compArt = this.TryGetComp<CompArt>();
-            }
+            compArt ??= this.TryGetComp<CompArt>();
 
             return compArt;
         }

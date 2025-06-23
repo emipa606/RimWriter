@@ -15,13 +15,13 @@ public class Building_Bookcase : Building_InternalStorage
             yield return g;
         }
 
-        if (innerContainer.Count > 0)
+        if (InnerContainer.Count > 0)
         {
             yield return new Command_Action
             {
                 defaultLabel = "RimWriter_RetrieveBook".Translate(),
                 icon = ContentFinder<Texture2D>.Get("UI/Commands/LaunchReport"),
-                defaultDesc = "RimWriter_RetrieveBookDesc".Translate(), action = ProcessInput
+                defaultDesc = "RimWriter_RetrieveBookDesc".Translate(), action = processInput
             };
         }
     }
@@ -35,21 +35,21 @@ public class Building_Bookcase : Building_InternalStorage
             s.AppendLine(baseStr);
         }
 
-        if (innerContainer.Count > 0)
+        if (InnerContainer.Count > 0)
         {
-            s.AppendLine("RimWriter_ContainsXBooks".Translate(innerContainer.Count));
+            s.AppendLine("RimWriter_ContainsXBooks".Translate(InnerContainer.Count));
         }
 
         s.AppendLine("RimWriter_XSlotsForBooks".Translate(CompStorageGraphic.Props.countFullCapacity));
         return s.ToString().TrimEndNewlines();
     }
 
-    private void ProcessInput()
+    private void processInput()
     {
         var list = new List<FloatMenuOption>();
-        if (innerContainer.Count != 0)
+        if (InnerContainer.Count != 0)
         {
-            foreach (var thing in innerContainer)
+            foreach (var thing in InnerContainer)
             {
                 var current = (ThingBook)thing;
                 var text = current.Label;
