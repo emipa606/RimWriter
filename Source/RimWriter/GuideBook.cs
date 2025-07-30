@@ -176,8 +176,8 @@ public class GuideBook : ThingBook
         skillDef ??= DefDatabase<SkillDef>.GetRandom();
     }
 
-    public void Teach(Pawn pawn)
+    public void Teach(Pawn pawn, int delta)
     {
-        pawn?.skills?.Learn(skillDef, LearnRate);
+        pawn?.skills?.Learn(skillDef, LearnRate * delta);
     }
 }

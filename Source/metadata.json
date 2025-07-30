@@ -3,10 +3,16 @@
   "CanAdd": "0",
   "CanRemove": "2",
   "PreviewVersion": "1.6",
-  "LastXmlCleaning": "2025-06-23T20:35:00.0789773+02:00",
+  "LastXmlCleaning": "2025-07-30T20:22:22.3680487+02:00",
   "SocialImageSet": true,
   "SearchTags": [
     " books",
     " research"
-  ]
+  ],
+  "Patches": false,
+  "Defs": true,
+  "Assemblies": true,
+  "LinesOfCode": 51336,
+  "LinesOfXML": 91568,
+  "CodeBaseSize": 81
 }

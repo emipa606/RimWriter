@@ -167,7 +167,7 @@ public class JobDriver_ReadABook : JobDriver
         var pawn1 = pawn;
         if (TargetThingA is GuideBook gBook)
         {
-            gBook.Teach(pawn1);
+            gBook.Teach(pawn1, delta);
         }
 
         JoyUtility.JoyTickCheckEnd(pawn1, delta, JoyTickFullJoyAction.GoToNextToil, statValue);
