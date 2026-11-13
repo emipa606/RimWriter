@@ -8,8 +8,6 @@ namespace RimWriter;
 
 public class ThingBook : ThingWithComps
 {
-    private CompArt compArt;
-
     public override string Label
     {
         get
@@ -27,9 +25,9 @@ public class ThingBook : ThingWithComps
     {
         get
         {
-            compArt ??= this.TryGetComp<CompArt>();
+            field ??= this.TryGetComp<CompArt>();
 
-            return compArt;
+            return field;
         }
     }
 

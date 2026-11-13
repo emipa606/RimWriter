@@ -1,10 +1,11 @@
+using System.Linq;
 using RimWorld;
 using UnityEngine;
 using Verse;
 
 namespace RimWriter;
 
-public class RimWriterUtility
+public static class RimWriterUtility
 {
     private const string AltSanityLossDef = "Cults_SanityLoss";
 
@@ -103,20 +104,20 @@ public class RimWriterUtility
     {
         loadedCosmicHorrors = false;
         loadedCults = false;
-        foreach (var resolvedMod in LoadedModManager.RunningMods)
+        foreach (var resolvedMod in LoadedModManager.RunningMods.Select(mod => mod.Name))
         {
             if (loadedCosmicHorrors && loadedCults)
             {
                 break; // Save some loading
             }
 
-            if (resolvedMod.Name.Contains("Call of Cthulhu - Cosmic Horrors"))
+            if (resolvedMod.Contains("Call of Cthulhu - Cosmic Horrors"))
             {
                 debugReport("Loaded - Call of Cthulhu - Cosmic Horrors");
                 loadedCosmicHorrors = true;
             }
 
-            if (!resolvedMod.Name.Contains("Call of Cthulhu - Cults"))
+            if (!resolvedMod.Contains("Call of Cthulhu - Cults"))
             {
                 continue;
             }

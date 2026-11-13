@@ -27,9 +27,8 @@ public class GuideBook : ThingBook
             }
 
             var authorNameInt = Traverse.Create(CompArt).Field("authorNameInt").GetValue<TaggedString>();
-            if (!string.IsNullOrEmpty(authorNameInt) && !authorNameInt.RawText.StartsWith(" "))
+            if (!string.IsNullOrEmpty(authorNameInt) && !authorNameInt.RawText.StartsWith(' '))
             {
-                // Log.Message(authorNameInt);
                 author = authorNameInt;
             }
             else
@@ -110,27 +109,27 @@ public class GuideBook : ThingBook
             var result = Color.white;
             if (skillDef == SkillDefOf.Animals)
             {
-                result = new Color(0.14f, 0.19f, 0.42f); // Color.steelblue;
+                result = new Color(0.14f, 0.19f, 0.42f); // steelblue;
             }
             else if (skillDef == SkillDefOf.Artistic)
             {
-                result = new Color(0.33f, 0.1f, 0.55f); // Color.purple
+                result = new Color(0.33f, 0.1f, 0.55f); // purple
             }
             else if (skillDef == SkillDefOf.Construction)
             {
-                result = new Color(0.8f, 0.4f, 0f); // Color.orange;
+                result = new Color(0.8f, 0.4f, 0f); // orange;
             }
             else if (skillDef == SkillDefOf.Cooking)
             {
-                result = new Color(0.4f, 0f, 0f); // Color.dullred;
+                result = new Color(0.4f, 0f, 0f); // dullred;
             }
             else if (skillDef == SkillDefOf.Crafting)
             {
-                result = new Color(0.5f, 0.16f, 0.16f); // Color.brown;
+                result = new Color(0.5f, 0.16f, 0.16f); // brown;
             }
             else if (skillDef == SkillDefOf.Intellectual)
             {
-                result = new Color(0f, 0f, 0.5f); // Color.navy;
+                result = new Color(0f, 0f, 0.5f); // navy;
             }
             else if (skillDef == SkillDefOf.Medicine)
             {
@@ -146,7 +145,7 @@ public class GuideBook : ThingBook
             }
             else if (skillDef == SkillDefOf.Plants)
             {
-                result = new Color(0.13f, 0.55f, 0.13f); // Color.forestgreen;
+                result = new Color(0.13f, 0.55f, 0.13f); // forestgreen;
             }
             else if (skillDef == SkillDefOf.Shooting)
             {

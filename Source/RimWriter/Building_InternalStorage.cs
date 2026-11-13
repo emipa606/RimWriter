@@ -6,7 +6,6 @@ namespace RimWriter;
 
 public class Building_InternalStorage : Building, IThingHolder, IStoreSettingsParent
 {
-    private CompStorageGraphic compStorageGraphic;
     protected ThingOwner InnerContainer;
 
     private StorageSettings storageSettings;
@@ -20,9 +19,9 @@ public class Building_InternalStorage : Building, IThingHolder, IStoreSettingsPa
     {
         get
         {
-            compStorageGraphic ??= this.TryGetComp<CompStorageGraphic>();
+            field ??= this.TryGetComp<CompStorageGraphic>();
 
-            return compStorageGraphic;
+            return field;
         }
     }
 

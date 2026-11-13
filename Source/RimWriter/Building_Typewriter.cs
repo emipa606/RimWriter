@@ -44,10 +44,7 @@ public class Building_Typewriter : Building_WorkTable
             yield return new Command_Action
             {
                 defaultLabel = "Debug: Set fuel to 0.1",
-                action = delegate
-                {
-                    // this.<> f__this.fuel = 0.1f;
-                }
+                action = delegate { }
             };
         }
     }
@@ -68,23 +65,23 @@ public class Building_Typewriter : Building_WorkTable
     /// <summary>
     ///     All the menu options for the Gramophone.
     /// </summary>
-    /// <param name="myPawn"></param>
+    /// <param name="selPawn"></param>
     /// <returns></returns>
-    public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn myPawn)
+    public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn selPawn)
     {
-        var list = base.GetFloatMenuOptions(myPawn).ToList();
+        var list = base.GetFloatMenuOptions(selPawn).ToList();
 
         Thing building = null;
         for (var i = 0; i < 4; i++)
         {
             var c = Position + GenAdj.CardinalDirections[i];
-            if (c.IsForbidden(myPawn))
+            if (c.IsForbidden(selPawn))
             {
                 continue;
             }
 
             var edifice = c.GetEdifice(Map);
-            if (edifice == null || !edifice.def.building.isSittable || !myPawn.CanReserve(edifice))
+            if (edifice == null || !edifice.def.building.isSittable || !selPawn.CanReserve(edifice))
             {
                 continue;
             }
@@ -93,17 +90,13 @@ public class Building_Typewriter : Building_WorkTable
             break;
         }
 
-        if (building == null)
-        {
-        }
-
-        if (!myPawn.CanReserve(this))
+        if (!selPawn.CanReserve(this))
         {
             list.Add(new FloatMenuOption("CannotUseReserved".Translate(), null));
             return list;
         }
 
-        if (!myPawn.CanReach(this, PathEndMode.InteractionCell, Danger.Some))
+        if (!selPawn.CanReach(this, PathEndMode.InteractionCell, Danger.Some))
         {
             list.Add(new FloatMenuOption("CannotUseNoPath".Translate(), null));
             return list;
@@ -115,7 +108,7 @@ public class Building_Typewriter : Building_WorkTable
             return list;
         }
 
-        if (!myPawn.health.capacities.CapableOf(PawnCapacityDefOf.Manipulation))
+        if (!selPawn.health.capacities.CapableOf(PawnCapacityDefOf.Manipulation))
         {
             list.Add(new FloatMenuOption(
                 "CannotUseReason".Translate("IncapableOfCapacity".Translate(PawnCapacityDefOf.Manipulation.label)),
@@ -131,7 +124,7 @@ public class Building_Typewriter : Building_WorkTable
         {
             var job = new Job(DefDatabase<JobDef>.GetNamed("RimWriter_FreeWrite"), this, building);
 
-            if (myPawn.jobs.TryTakeOrderedJob(job))
+            if (selPawn.jobs.TryTakeOrderedJob(job))
             {
                 // Lala
             }
@@ -223,7 +216,7 @@ public class Building_Typewriter : Building_WorkTable
         }
         catch
         {
-            // Log.Message("Error loading Sanity Hediff.");
+            // ignored
         }
     }
 

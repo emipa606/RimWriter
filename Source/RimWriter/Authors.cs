@@ -2,7 +2,7 @@ using Verse;
 
 namespace RimWriter;
 
-public class Authors
+public static class Authors
 {
     public static string Random => new[]
     {

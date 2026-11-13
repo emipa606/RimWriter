@@ -17,7 +17,7 @@ public class JobDriver_ReadABook : JobDriver
         {
             var actor = toil.actor;
             var intVec = IntVec3.Invalid;
-            var unused = actor.CurJob.GetTarget(ingestibleInd).Thing;
+            _ = actor.CurJob.GetTarget(ingestibleInd).Thing;
 
             var thing = GenClosest.ClosestThingReachable(actor.Position, actor.Map,
                 ThingRequest.ForGroup(ThingRequestGroup.BuildingArtificial), PathEndMode.OnCell,
@@ -115,7 +115,7 @@ public class JobDriver_ReadABook : JobDriver
         return true;
     }
 
-    public override bool TryMakePreToilReservations(bool v)
+    public override bool TryMakePreToilReservations(bool errorOnFailed)
     {
         return pawn.Reserve(job.GetTarget(TargetIndex.A), job);
     }

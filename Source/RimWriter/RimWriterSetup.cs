@@ -17,15 +17,9 @@ public static class RimWriterSetup
         Log.Message("Added recipes for burning books/scrolls successfully.");
 
         var cultsGrimoire = DefDatabase<ThingDef>.GetNamedSilentFail("Cults_Grimoire");
-        if (cultsGrimoire != null)
-        {
-            cultsGrimoire.thingCategories = [ThingCategoryDef.Named("RimWriter_Books")];
-        }
+        cultsGrimoire?.thingCategories = [ThingCategoryDef.Named("RimWriter_Books")];
 
         var cultsKingInYellow = DefDatabase<ThingDef>.GetNamedSilentFail("Cults_TheKingInYellow");
-        if (cultsKingInYellow != null)
-        {
-            cultsKingInYellow.thingCategories = [ThingCategoryDef.Named("RimWriter_Books")];
-        }
+        cultsKingInYellow?.thingCategories = [ThingCategoryDef.Named("RimWriter_Books")];
     }
 }

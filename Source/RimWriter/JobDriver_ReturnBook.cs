@@ -20,9 +20,9 @@ public class JobDriver_ReturnBook : JobDriver
 
     private Building_InternalStorage Storage => (Building_InternalStorage)job.GetTarget(GraveIndex).Thing;
 
-    public override bool TryMakePreToilReservations(bool b)
+    public override bool TryMakePreToilReservations(bool errorOnFailed)
     {
-        return pawn.Reserve(Book, job) && pawn.Reserve(Book, job);
+        return pawn.Reserve(Book, job);
     }
 
     protected override IEnumerable<Toil> MakeNewToils()

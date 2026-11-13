@@ -6,4 +6,68 @@
     <BuildType Name="Release" />
   </Configurations>
   <Project Path="RimWriter/RimWriter.csproj" />
+  <Folder Name="/XML/1.7/Defs/Tutor/">
+    <File Path="../1.7/Defs/Tutor/RimWriter_Concepts.xml" />
+  </Folder>
+  <Folder Name="/XML/Languages/English/Keyed/">
+    <File Path="../Languages/English/Keyed/RimWriter_Keys.xml" />
+  </Folder>
+  <Folder Name="/XML/About/">
+    <File Path="../About/about.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/JoyGiverDefs/">
+    <File Path="../1.7/Defs/JoyGiverDefs/RimWriter_JoyGivers.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/RecipeDefs/">
+    <File Path="../1.7/Defs/RecipeDefs/RimWriter_BookBinding.xml" />
+    <File Path="../1.7/Defs/RecipeDefs/RimWriter_BurnBooks.xml" />
+    <File Path="../1.7/Defs/RecipeDefs/RimWriter_MaterialCrafting.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/SoundDefs/">
+    <File Path="../1.7/Defs/SoundDefs/RimWriter_Sounds.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/ConceptDefs/">
+    <File Path="../1.7/Defs/ConceptDefs/RimWriter_Concepts.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/Rooms/">
+    <File Path="../1.7/Defs/Rooms/RimWriter_Rooms.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/RulePackDefs/">
+    <File Path="../1.7/Defs/RulePackDefs/RimWriter_Rules.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/WorkGiverDefs/">
+    <File Path="../1.7/Defs/WorkGiverDefs/RimWriter_WorkGivers.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/ThingDefs_Item/">
+    <File Path="../1.7/Defs/ThingDefs_Item/RimWriter_Books.xml" />
+    <File Path="../1.7/Defs/ThingDefs_Item/RimWriter_Journals.xml" />
+    <File Path="../1.7/Defs/ThingDefs_Item/RimWriter_Materials.xml" />
+    <File Path="../1.7/Defs/ThingDefs_Item/RimWriter_Scrolls.xml" />
+    <File Path="../1.7/Defs/ThingDefs_Item/RimWriter_Skillbooks.xml" />
+    <File Path="../1.7/Defs/ThingDefs_Item/RimWriter_Tablets.xml" />
+    <File Path="../1.7/Defs/ThingDefs_Item/RimWriter_UnfinishedThings.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/ThingCategories/">
+    <File Path="../1.7/Defs/ThingCategories/RimWriter_ThingCategories.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/ResearchProjectDefs/">
+    <File Path="../1.7/Defs/ResearchProjectDefs/RimWriter_ResearchProjects.xml" />
+    <File Path="../1.7/Defs/ResearchProjectDefs/RimWriter_ResearchTab.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/ThingDefs_Buildings/">
+    <File Path="../1.7/Defs/ThingDefs_Buildings/RimWriter_Bookcases.xml" />
+    <File Path="../1.7/Defs/ThingDefs_Buildings/RimWriter_Buildings.xml" />
+    <File Path="../1.7/Defs/ThingDefs_Buildings/RimWriter_PaperTables.xml" />
+    <File Path="../1.7/Defs/ThingDefs_Buildings/RimWriter_Scrollcases.xml" />
+    <File Path="../1.7/Defs/ThingDefs_Buildings/RimWriter_WritingTables.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/ThoughDefs/">
+    <File Path="../1.7/Defs/ThoughDefs/RimWriter_Thoughts.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/JoyKindDefs/">
+    <File Path="../1.7/Defs/JoyKindDefs/RimWriter_JoyKindDefs.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/JobDefs/">
+    <File Path="../1.7/Defs/JobDefs/RimWriter_JobDefs.xml" />
+  </Folder>
 </Solution>

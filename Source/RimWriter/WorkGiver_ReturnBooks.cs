@@ -24,13 +24,10 @@ public class WorkGiver_ReturnBooks : WorkGiver_Scanner
         }
 
         var buildingInternalStorage = findBestStorage(pawn, t);
-        if (buildingInternalStorage != null)
+        if (buildingInternalStorage != null && book != null)
         {
-            if (book != null)
-            {
-                return new Job(DefDatabase<JobDef>.GetNamed("RimWriter_ReturnBook"), t, buildingInternalStorage)
-                    { count = book.stackCount };
-            }
+            return new Job(DefDatabase<JobDef>.GetNamed("RimWriter_ReturnBook"), t, buildingInternalStorage)
+                { count = book.stackCount };
         }
 
         JobFailReason.Is("RimWriter_NoInternalStorage".Translate());
