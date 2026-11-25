@@ -1,4 +1,4 @@
-# [RimWriter - Books, Scrolls, Tablets, and Libraries (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=2251045831)
+# [[Deprecated] RimWriter - Books, Scrolls, Tablets, and Libraries (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=2251045831)
 
 ![Image](https://img.litet.net/logos/Info.png)
 
@@ -10,7 +10,9 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1521844535
 - Added chinese translation based on the mod by leafzxg
 - Also checkout the [RimWriter Addon](https://steamcommunity.com/sharedfiles/filedetails/?id=2859447345) by greensniperhat
 
-![Image](https://img.litet.net/logos/Notice.png)
+![Image](https://img.litet.net/logos/Abandoned.png)
+
+This mod has been replaced by [Rim Writer (Continued) (TSP)](https://steamcommunity.com/sharedfiles/filedetails/?id=3844970631) by TurtleShroom
 	
 ![Image](https://img.litet.net/logos/OriginalDescription.png)
 

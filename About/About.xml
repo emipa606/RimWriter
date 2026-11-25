@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>RimWriter - Books, Scrolls, Tablets, and Libraries (Continued)</name>
+  <name>[Deprecated] RimWriter - Books, Scrolls, Tablets, and Libraries (Continued)</name>
   <packageId>Mlie.RimWriter</packageId>
   <author>Jecrell</author>
   <url>https://github.com/emipa606/RimWriter</url>
@@ -34,7 +34,9 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1521844535
 - Added chinese translation based on the mod by leafzxg
 - Also checkout the [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2859447345]RimWriter Addon[/url] by greensniperhat
 
-[img]https://img.litet.net/logos/Notice.png[/img]
+[img]https://img.litet.net/logos/Abandoned.png[/img]
+
+This mod has been replaced by [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3844970631]Rim Writer (Continued) (TSP)[/url] by TurtleShroom
 
 [table]
 	[tr]
@@ -97,5 +99,5 @@ No.
 [/list] 
 
 [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2251045831][img]https://img.shields.io/github/v/release/emipa606/RimWriter?label=latest%20version&amp;style=plastic&amp;color=9f1111&amp;labelColor=black[/img][/url] | books, research</description>
-  <modVersion IgnoreIfNoMatchingField="True">1.7.0</modVersion>
+  <modVersion IgnoreIfNoMatchingField="True">1.7.1</modVersion>
 </ModMetaData>

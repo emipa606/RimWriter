@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<TabulaRasa.UpdateDef Abstract="true" Name="RimWriter_UpdateInfoBase">
+		<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2251045831</linkUrl>
+		<banner>UpdateInfo/RimWriter</banner>
+	</TabulaRasa.UpdateDef>
+	<TabulaRasa.UpdateDef ParentName="RimWriter_UpdateInfoBase" MayRequire="neronix17.toolbox">
+		<defName>RimWriter_1_7_0</defName>
+		<date>2026/11/25</date>
+		<content>This mod will not be further updated, please use Rim Writer (Continued) (TSP) by TurtleShroom instead.</content>
+	</TabulaRasa.UpdateDef>
+</Defs>
+

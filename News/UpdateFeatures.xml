@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HugsLib.UpdateFeatureDef Abstract="true" Name="RimWriter_UpdateFeatureBase">
+		<modNameReadable>RimWriter</modNameReadable>
+		<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2251045831</linkUrl>
+	</HugsLib.UpdateFeatureDef>
+	<HugsLib.UpdateFeatureDef ParentName="RimWriter_UpdateFeatureBase">
+		<defName>RimWriter_1_7_0</defName>
+		<assemblyVersion>1.7.0</assemblyVersion>
+		<content>This mod will not be further updated, please use Rim Writer (Continued) (TSP) by TurtleShroom instead.</content>
+	</HugsLib.UpdateFeatureDef>
+</Defs>
+
